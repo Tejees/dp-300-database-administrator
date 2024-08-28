@@ -69,7 +69,7 @@ In this lab, you will complete the following tasks:
 
     >**Note:** Your deployment may take 5-10 minutes to complete.
 
-    ![Picture 19](../images/dp-300-lab1-8.png)
+    ![Picture 19](../images/up1.png)
     
  1. On the **Overview** page for the virtual machine, explore the menu options for this resource to review what is available.
 
@@ -109,11 +109,11 @@ In this lab, you will complete the following tasks:
 
    ![Picture 34](../images/dp-300-lab1-15.png)
 
-1. When SSMS opens, notice that the **Connect to Server** dialog will be pre-populated with the default instance name. Select **Connect**.
+1. When SSMS opens, notice that the Connect to Server dialog will be pre-populated with the default instance name. Check the option Trust server certificate and then select Connect.
 
-    ![Picture 35](../images/dp-300-lab1-16.png)
+    ![Picture 35](../images/up2.png)
 
->**Note**: Make sure Encryption is selected as optional.
+>**Note**: Make sure Encryption is selected as Mandatory.
 
 >**Results:** In this exercise, you've seen how the Azure portal gives you powerful tools to manage a SQL Server hosted in a virtual machine. These tools include control over automated patching, automated backups, and giving you an easy way to setup high availability.
 
