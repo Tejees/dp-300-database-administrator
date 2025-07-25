@@ -23,9 +23,9 @@ In this lab, you will complete the following task:
     https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sql/sql-database
     ```
 
-1. Right-click **azuredeploy.json**, and select **Open link in new tab** to view the ARM template, which should look similar to this:
+1. Right-click **azuredeploy.json (1)**, and select **Open link in new tab (2)** to view the ARM template, which should look similar to this:
 
-   ![Deploy to Azure button](../images/2508.png)
+   ![Deploy to Azure button](../images/2514.png)
     
 
     ```JSON
