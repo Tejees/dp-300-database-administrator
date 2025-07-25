@@ -139,12 +139,11 @@ You will be creating a Virtual Network to establish a secure environment for res
 14. Once the deployment is complete, click **Go to resource**.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+     <validation step="821cad36-93f1-4c9f-9db3-e7c82d22235d" />
   
- 
 ### Task 3 - Enable access to an Azure SQL Database
 
 1. From the **SQL database** page, select the **Overview** section, and then select the link for the server name in the top section:
@@ -171,15 +170,15 @@ You will be creating a Virtual Network to establish a secure environment for res
 
      ![Picture 17](../images/servername.png)
 
-3. Launch SQL Server Management Studio from the lab VM.
+3. Launch SQL Server Management Studio from the lab VM, search for **SQL Server Management(1)** in the search box and select **SQL Server Management Studio Studio Management Studio 19** 
 
      ![Picture 17](../images/searchsql.png)
 
-4. In the Connect to Server dialog pop-up, paste the Server name value copied from the Azure portal.
+4. In the Connect to Server dialog pop-up, paste the **Server name** value copied from the Azure portal.
 5. In the Authentication dropdown, select **SQL Server Authentication**.
 6. In the Login field, enter **dp300admin**.
 7. In the Password field, enter the password **dp300P@ssword!**.
-8. Select Connect.
+8. Select **Connect**.
 
    ![Picture 17](../images/connectsqlser.png)
 
@@ -187,7 +186,7 @@ You will be creating a Virtual Network to establish a secure environment for res
 
 ### Task 5 - Query an Azure SQL Database with SQL Server Management Studio
 
-1. In SQL Server Management Studio, right-click on the AdventureWorksLT database and select New Query.
+1. In SQL Server Management Studio, right-click on the **AdventureWorksLT** database and select **New Query**.
 
    ![Picture 21](../images/newquery.png)
 
@@ -204,11 +203,11 @@ You will be creating a Virtual Network to establish a secure environment for res
     ORDER BY [OverallOrderSubTotal] DESC
     ```
 
-3. Select on the Execute button in the toolbar to execute the query.
+3. Select on the **Execute button** in the toolbar to execute the query in the **query window**.
 
      ![Picture 21](../images/execute.png)
 
-4. In the Results pane, review the results of the query.
+4. In the **Results** pane, review the results of the query.
 
      ![Picture 21](../images/resultsq.png)
 
@@ -230,13 +229,11 @@ You will be creating a Virtual Network to establish a secure environment for res
 7. Select on the Execute button in the toolbar to execute the query.
 8. In the Results pane, review the results of the query.
 
-******
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+     <validation step="79a087b3-ae86-46cf-9488-90e25c51279a" />
 
 >**Results:** In this exercise, you've seen how you deploy a Azure SQL Database with a Virtual Network Endpoint. You were also able to connect to the SQL Database you've created using SQL Server Management Studio.
 
