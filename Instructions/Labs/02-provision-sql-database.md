@@ -172,13 +172,15 @@ In this you will enable access to the Azure SQL Database by adding your IP addre
     
 ### Task 4 - Connect to an Azure SQL Database in SQL Server Management Studio
 
+Use SQL Server Management Studio (SSMS) to connect to the Azure SQL Database and enabling encryption. Once connected, you can query and manage the database.
+
 1. On the Azure portal, select the **SQL databases** in the left navigation pane. And then select the **AdventureWorksLT** database.
 
 2. Copy the **Server name** value from the Overview page.
 
      ![Picture 17](../images/servername.png)
 
-3. Launch SQL Server Management Studio from the lab VM, search for **SQL Server Management(1)** in the search box and select **SQL Server Management Studio Studio Management Studio 19** 
+3. Launch SQL Server Management Studio from the lab VM by searching for **SQL Server Management(1)** in the search box and select **SQL Server Management Studio Studio Management Studio 19** 
 
      ![Picture 17](../images/searchsql.png)
 
@@ -197,6 +199,8 @@ In this you will enable access to the Azure SQL Database by adding your IP addre
 9. SQL Server Management Studio will connect to your Azure SQL Database server. You can expand the server and then the Databases node to see the AdventureWorksLT database.
 
 ### Task 5 - Query an Azure SQL Database with SQL Server Management Studio
+
+Connect to the Azure SQL Database using SQL Server Management Studio (SSMS) with the server name, login, and password and run queries to interact with and manage the database
 
 1. In SQL Server Management Studio, right-click on the **AdventureWorksLT** database and select **New Query**.
 
