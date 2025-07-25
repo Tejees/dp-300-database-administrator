@@ -119,7 +119,7 @@ In this you will be creating an Azure SQL Database with SQL authentication, usin
 - **Name:** DP-300-SQL-Endpoint **(4)**
 - **Target sub-resource:** SqlServer **(5)**
 - **Virtual network:** lab02-vnet(contoso-rg-<inject key="DeploymentID" enableCopy="false"/>) **(6)**
-- **Subnet:** default (10.x.0.0/24) **(7)**
+- **Subnet:** default **(7)**
 - **Integrate with private DNS zone:** Yes **(8)**
 - **Private DNS zone:** keep the default value **(9)**
 - Review settings, and then click **OK(10)**
