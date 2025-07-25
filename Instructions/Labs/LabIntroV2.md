@@ -1,5 +1,9 @@
 # Getting Started with Your DP-300: Azure Database Administrator Associate
- 
+
+### Overall Estimated Duration: 45 minutes
+
+### Overview
+
 Welcome to your DP-300: Azure Database Administrator Associate workshop! You'll learn to manage and implement Azure SQL Database and Azure SQL Managed Instance, focusing on deployment, security, performance optimization, and high availability on Azure. Let's begin by making the most of this experience:
  
 ## Accessing Your Lab Environment
