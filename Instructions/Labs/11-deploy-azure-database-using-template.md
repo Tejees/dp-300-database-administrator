@@ -25,6 +25,9 @@ In this lab, you will complete the following task:
 
 1. Right-click **azuredeploy.json**, and select **Open link in new tab** to view the ARM template, which should look similar to this:
 
+   ![Deploy to Azure button](../images/2508.png)
+    
+
     ```JSON
     {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
@@ -97,19 +100,22 @@ In this lab, you will complete the following task:
 
 1. Review and observe the JSON properties.
 
-1. Close the **azuredeploy.json** tab and return to the tab containing the **sql-database** GitHub folder. Scroll down and select **Deploy to Azure**. Enter **Username** and **Password** from the **Environment Details** Tab.
+1. Close the **azuredeploy.json** tab and return to the tab containing the **sql-database** GitHub folder in **README.md**. Scroll down and select **Deploy to Azure**. Enter **Username** and **Password** from the **Environment Details** Tab.
 
-    ![Deploy to Azure button](../images/dp300-lab11-img1_newone.png)
+    ![Deploy to Azure button](../images/2509.png)
+
+
+    ![Deploy to Azure button](../images/2510.png)
 
 1. The **Create a SQL Server and Database** quickstart template page will open on Azure portal, with resource details partially filled in from the ARM template. Complete the blank fields with the information below:
 
-    - **Resource group:** contoso-rg-<inject key="DeploymentID" enableCopy="false" />
-    - **Administrator Login:** labadmin
-    - **Administrator Login Password:** &lt;enter a strong password&gt;
+    - **Resource group:** contoso-rg-<inject key="DeploymentID" enableCopy="false" /> **(1)**
+    - **Administrator Login:** labadmin **(2)**
+    - **Administrator Login Password:** &lt;enter a strong password&gt; **(3)**
     
-    ![Picture 2](../images/dp300-lab11-usernamepassword.png)
+    ![Picture 2](../images/2513.png)
     
-1. Select **Review + create**, and then select **Create**. Your deployment will take 5 minutes or so to deploy.
+1. Select **Review + create (4)**, and then select **Create**. Your deployment will take 5 minutes or so to deploy.
 
     ![Picture 2](../images/dp300-lab11-img02.png)
 
@@ -124,6 +130,8 @@ In this lab, you will complete the following task:
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="5bab5a52-20c6-4893-acef-bedc4d988f95" />
 
 >**Results:** In this exercise you've just seen how, with a single click on an Azure Resource Manager template link, you can easily create both an Azure SQL server and database.
 
