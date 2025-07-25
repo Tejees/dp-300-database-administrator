@@ -177,118 +177,60 @@ You will be creating a Virtual Network to establish a secure environment for res
 
 4. In the Connect to Server dialog pop-up, paste the Server name value copied from the Azure portal.
 5. In the Authentication dropdown, select **SQL Server Authentication**.
-6. In the Login field, enter **dp300admin**
+6. In the Login field, enter **dp300admin**.
 7. In the Password field, enter the password **dp300P@ssword!**.
 8. Select Connect.
-     ![Picture 17](../images/connectsqlser.png)
+
+   ![Picture 17](../images/connectsqlser.png)
+
 9. SQL Server Management Studio will connect to your Azure SQL Database server. You can expand the server and then the Databases node to see the AdventureWorksLT database.
-
-    
-
-3.
-4. In the Connect to Server dialog, paste the Server name value copied from the Azure portal.
-In the **Connection** sidebar, fill out the **Connection Details** section with connection information to connect to the SQL database created previously.
-
-- Connection Type: **Microsoft SQL Server (1)**
-- Server: Enter the name of the SQL Server created previously. For example: **dp300-lab-<inject key="DeploymentID" enableCopy="false"/>.database.windows.net (2)**
-- Authentication Type: **SQL Login (3)**
-- User name: **dp300admin (4)**
-- Password: **dp300P@ssword! (5)**
-- Expand the Database drop-down to select **AdventureWorksLT (6)**
-- Server group will remain on **&lt;default&gt; (7)**
-- Name (optional) can be populated with a friendly name of the database, if desired
-- Review settings and click **Connect (8)**
-
-   ![Picture 24](../images/12345.png)
-
-  >**NOTE:** if in **Database** the option doesn't come, try to reopen **Azure Data Studio** again, and re-perform the steps from 2-3.
-
-  >**NOTE:** You may be asked to add a firewall rule that allows your client IP access to this server. If you are asked to add a firewall rule, click on **Add account** and login to your Azure account. On **Create new firewall rule** screen, click **OK**.
-
-    ![Picture 18](../images/upd-dp-300-module-02-lab-26.png)
-
- - Alternatively, you can manually create a firewall rule for your SQL server on Azure portal by navigating to your SQL server, selecting **Networking**, and then selecting **+ Add your client IPv4 address (your IP address)**
-
-   ![Picture 18](../images/upd-dp-300-module-02-lab-47.png)
-
-4. Azure Data Studio will connect to the database, and show some basic information about the database, plus a partial list of objects.
-
-    ![Picture 20](../images/upd-dp-300-module-02-lab-28.png)
 
 ### Task 5 - Query an Azure SQL Database with SQL Server Management Studio
 
 1. In SQL Server Management Studio, right-click on the AdventureWorksLT database and select New Query.
+
+   ![Picture 21](../images/newquery.png)
+
 2. Paste the following SQL statement into the query window:
+
+    ```sql
+    SELECT TOP 10 cust.[CustomerID], 
+        cust.[CompanyName], 
+        SUM(sohead.[SubTotal]) as OverallOrderSubTotal
+    FROM [SalesLT].[Customer] cust
+        INNER JOIN [SalesLT].[SalesOrderHeader] sohead
+             ON sohead.[CustomerID] = cust.[CustomerID]
+    GROUP BY cust.[CustomerID], cust.[CompanyName]
+    ORDER BY [OverallOrderSubTotal] DESC
+    ```
+
 3. Select on the Execute button in the toolbar to execute the query.
+
+     ![Picture 21](../images/execute.png)
+
 4. In the Results pane, review the results of the query.
+
+     ![Picture 21](../images/resultsq.png)
+
 5. Right-click on the AdventureWorksLT database and select New Query.
-6. Paste the following SQL statement into the query window:
+6. Paste the following SQL statement into the query window
+
+    ```sql
+    SELECT TOP 10 cat.[Name] AS ProductCategory, 
+        SUM(detail.[OrderQty]) AS OrderedQuantity
+    FROM salesLT.[ProductCategory] cat
+        INNER JOIN [SalesLT].[Product] prod
+            ON prod.[ProductCategoryID] = cat.[ProductCategoryID]
+        INNER JOIN [SalesLT].[SalesOrderDetail] detail
+            ON detail.[ProductID] = prod.[ProductID]
+    GROUP BY cat.[name]
+    ORDER BY [OrderedQuantity] DESC
+    ```
+
 7. Select on the Execute button in the toolbar to execute the query.
 8. In the Results pane, review the results of the query.
-9. Close SQL Server Management Studio. Select No when prompted to save changes.
 
-    ![Picture 21](../images/upd-dp-300-module-02-lab-29.png)
-
-10. Click the **+Text** link to add a new text box in the notebook
-
-    ![Picture 22](../images/upd-dp-300-module-02-lab-30.png)
-
-    >**Note:** Within the notebook you can embed plain text to explain queries or result sets.
-
-11. Enter the text **Top Ten Customers by Order SubTotal**, making it Bold if desired.
-
-    ![A screenshot of a cell phone Description automatically generated](../images/upd-dp-300-module-02-lab-31.png)
-
-12. Click the **+ Cell** button, then **Code cell** to add a new code cell at the end of the notebook.
-
-    ![Picture 23](../images/upd-dp-300-module-02-lab-32.png)
-
-13. Paste the following SQL statement into the new cell:
-
-   ```sql
-   SELECT TOP 10 cust.[CustomerID],
-   cust.[CompanyName],
-   SUM(sohead.[SubTotal]) as OverallOrderSubTotal
-   FROM [SalesLT].[Customer] cust
-   INNER JOIN [SalesLT].[SalesOrderHeader] sohead
-   ON sohead.[CustomerID] = cust.[CustomerID]
-   GROUP BY cust.[CustomerID], cust.[CompanyName]
-   ORDER BY [OverallOrderSubTotal] DESC
-   ```
-
-11. Click on the **blue circle with the arrow to execute** the query. Note how the results are included within the cell with the query.
-
-   ![Picture 24](../images/1234.png)
-
-11. Click the **+ Cell** button, then **Text cell** to add a new code cell at the end of the notebook.
-
-    ![Picture 24](../images/upd-dp-300-module-02-lab-34.png)
-
-12. Enter the text **Top Ten Ordered Product Categories**, making it Bold if desired.
-
-13. Click the **+ Cell** button again, then **Code cell**, and paste the following SQL statement into the cell:
-
-   ```sql
-   SELECT TOP 10 cat.[Name] AS ProductCategory,
-   SUM(detail.[OrderQty]) AS OrderedQuantity
-   FROM salesLT.[ProductCategory] cat
-   INNER JOIN [SalesLT].[Product] prod
-   ON prod.[ProductCategoryID] = cat.[ProductCategoryID]
-   INNER JOIN [SalesLT].[SalesOrderDetail] detail
-   ON detail.[ProductID] = prod.[ProductID]
-   GROUP BY cat.[name]
-   ORDER BY [OrderedQuantity] DESC
-   ```
-
-11. Click on the **blue circle with the arrow to execute** the query.
-
-12. To run all cells in the notebook and present results, click the **Run all** button in the toolbar.
-
-    ![Picture 17](../images/upd-dp-300-module-02-lab-33.png)
-
-13. Within Azure Data Studio save the notebook from File menu (either Save or Save As) to the **C:\LabFiles\Deploy Azure SQL Database** path (create the folder structure if it does not exist). Make sure the file extension is **.ipynb**(Notebook)
-
-14. Close the tab for the Notebook from inside of Azure Data Studio. From the File Menu, select Open File, and open the notebook you just saved. Observe that query results were saved along with the queries in the notebook.
+******
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
