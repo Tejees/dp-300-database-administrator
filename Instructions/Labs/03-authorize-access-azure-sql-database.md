@@ -76,7 +76,7 @@ In this task, you will manage access to the database and its objects. The first 
 
 1. Use the **Object Explorer** and expand **Databases (1)**. Right-click on **AdventureWorksLT**, and select **New Query (2)**.
 
-   ![Screenshot of the new query menu option](../images/252.png)
+    ![Screenshot of the new query menu option](../images/252.png)
 
 1. In the new query window, copy and paste the below T-SQL into it. **Execute** the query to create the two users.
 
