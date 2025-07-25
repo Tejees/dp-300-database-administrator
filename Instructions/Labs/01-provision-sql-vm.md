@@ -91,7 +91,7 @@ In this task you will be deploying a SQL Server on an Azure Virtual Machine allo
 
 In this task you will be connecting to SQL Server on an Azure Virtual Machine which involves accessing the VM using its public IP and SQL credentials via tools like SSMS.
 
-1. On the **Overview** page for the virtual machine, select the **Connect** pulldown and select **Connect**.
+1. On the **Overview** page for the virtual machine, select the **Connect v (1)** pulldown and select **Connect(2)**.
 
     ![Picture 22](../images/connectvm1.png)
 
