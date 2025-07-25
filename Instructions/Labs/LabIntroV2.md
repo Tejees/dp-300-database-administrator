@@ -60,11 +60,11 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 4. If prompted to stay signed in, you can click **No**.
 
-  ![Enter Your Password](../images/2506.png)
+    ![Enter Your Password](../images/2506.png)
 
 5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "**Cancel**" to skip the tour.
 
-  ![Enter Your Password](../images/2507.png)
+    ![Enter Your Password](../images/2507.png)
 
 6. Click **Next** from the bottom right corner to embark on your Lab journey!
  
