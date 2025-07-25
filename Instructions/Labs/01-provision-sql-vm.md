@@ -91,7 +91,7 @@ In Task 1, you will deploy a SQL Server on an Azure Virtual Machine using the Az
 
 1. On the RDP tab, select the **Download RDP File** button.
 
-    ![Picture 22](../images/dp-300-lab1-10.png)
+    ![Picture 22](../images/sqlconnect.png)
 
     >**Note**: If you see the error **Port prerequisite not met**. Make sure to select the link to add an inbound network security group rule with the destination port mentioned in the *Port number* field.
 
