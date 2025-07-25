@@ -77,7 +77,7 @@ In this you will be creating an Azure SQL Database with SQL authentication, usin
      - **Resource group(2):** **contoso-rg-<inject key="DeploymentID" enableCopy="false"/>**
      - **Database Name(3):** AdventureWorksLT
      
-     ![sql](../images/sqldbserver.png)
+     ![sql](../images/createsql.png)
 
      - **Server:** click on **Create new(4)** link. The **Create SQL Database Server** page will open. Provide the server details as follow:
           - **Server name:** dp300-lab-<inject key="DeploymentID" enableCopy="false"/> **(1)**
