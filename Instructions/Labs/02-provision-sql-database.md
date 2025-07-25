@@ -221,7 +221,7 @@ Connect to the Azure SQL Database using SQL Server Management Studio (SSMS) with
     ORDER BY [OverallOrderSubTotal] DESC
     ```
 
-3. Select on the **Execute button** in the toolbar to execute the **query** in the query window.
+3. Select on the **Execute** button in the toolbar to execute the **query** in the query window.
 
      ![Picture 21](../images/execute1.png)
 
@@ -229,7 +229,10 @@ Connect to the Azure SQL Database using SQL Server Management Studio (SSMS) with
 
      ![Picture 21](../images/resultsq1.png)
 
-5. Right-click on the AdventureWorksLT database and select New Query.
+5. Right-click on the **AdventureWorksLT** database and select **New Query**.
+
+   ![Picture 21](../images/newquery.png)
+
 6. Paste the following SQL statement into the query window
 
     ```sql
@@ -244,10 +247,13 @@ Connect to the Azure SQL Database using SQL Server Management Studio (SSMS) with
     ORDER BY [OrderedQuantity] DESC
     ```
 
-7. Select on the Execute button in the toolbar to execute the query.
+7. Select on the **Execute** button in the toolbar to execute the query.
+     
+     ![Picture 21](../images/execute1.png)
+     
 8. In the Results pane, review the results of the query.
 
-
+     ![Picture 21](../images/resultsq1.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
