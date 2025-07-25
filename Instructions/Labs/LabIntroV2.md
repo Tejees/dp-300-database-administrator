@@ -48,7 +48,7 @@ Feel free to **start, stop, or restart(2)** your virtual machine as needed from 
  
    ![Enter Your Password](../images/user1.png)
 
-4. If prompted to stay signed in, you can click "No."
+4. If prompted to stay signed in, you can click **No**.
 
   ![Enter Your Password](../images/signedinno.png)
 
