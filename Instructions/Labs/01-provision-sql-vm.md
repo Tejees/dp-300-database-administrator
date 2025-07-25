@@ -85,7 +85,7 @@ In this task you will be deploying a SQL Server on an Azure Virtual Machine allo
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="3379fa81-ffc4-49c5-82db-97274e81a612" />
+  <validation step="577c1452-0678-4fb0-9302-18ecc9944a6c" />
 
 ### Task 2 - Connect to SQL Server on an Azure Virtual Machine
 
