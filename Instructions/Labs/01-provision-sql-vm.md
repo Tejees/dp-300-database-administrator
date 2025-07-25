@@ -93,6 +93,8 @@ In this task you will be connecting to SQL Server on an Azure Virtual Machine wh
 
 1. On the **Overview** page for the virtual machine, select the **Connect** pulldown and select **Connect**.
 
+    ![Picture 22](../images/connectvm.png)
+
 1. On the RDP tab, select the **Download RDP File** button.
 
     ![Picture 22](../images/sqlconnect.png)
