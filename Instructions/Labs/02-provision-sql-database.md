@@ -260,7 +260,7 @@ In this lab, you have completed:
 - Created a Virtual Network.
 - Provisioned an Azure SQL Database.
 - Enabled access to an Azure SQL Database.
-- Connected to an Azure SQL Database in Azure Data Studio.
+- Connected to an Azure SQL Database in SQL Server Management Studio.
 - Queried an Azure SQL Database with a SQL Notebook.
   
 ### You have successfully completed the lab.
