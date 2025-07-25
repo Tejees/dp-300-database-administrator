@@ -168,15 +168,22 @@ You will be creating a Virtual Network to establish a secure environment for res
 
 1. On the Azure portal, select the SQL databases in the left navigation pane. And then select the AdventureWorksLT database.
 2. Copy the Server name value from the Overview page.
+
+     ![Picture 17](../images/servername.png)
+
 3. Launch SQL Server Management Studio from the lab VM.
-4. In the Connect to Server dialog, paste the Server name value copied from the Azure portal.
-5. In the Authentication dropdown, select SQL Server Authentication.
-6. In the Login field, enter dp300admin
-7. In the Password field, enter the password selected during the SQL server creation.
+
+     ![Picture 17](../images/servername.png)
+
+4. In the Connect to Server dialog pop-up, paste the Server name value copied from the Azure portal.
+5. In the Authentication dropdown, select **SQL Server Authentication**.
+6. In the Login field, enter **dp300admin**
+7. In the Password field, enter the password **dp300P@ssword!**.
 8. Select Connect.
+     ![Picture 17](../images/connectsqlser.png)
 9. SQL Server Management Studio will connect to your Azure SQL Database server. You can expand the server and then the Databases node to see the AdventureWorksLT database.
 
-    ![Picture 17](../images/lab2_1.png)
+    
 
 3.
 4. In the Connect to Server dialog, paste the Server name value copied from the Azure portal.
