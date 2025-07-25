@@ -1,5 +1,7 @@
 # Lab 01: Provision a SQL Server on an Azure Virtual Machine
 
+## Estimated Time: 30 minutes
+
 ## Lab scenario
 Students will explore the Azure Portal and use it to create an Azure VM with SQL Server 2019 installed. Then they will connect to the virtual machine through Remote Desktop Protocol.
 
@@ -12,7 +14,8 @@ In this lab, you will complete the following tasks:
 - Task 1: Deploy a SQL Server on an Azure Virtual Machine
 - Task 2: Connect to SQL Server on an Azure Virtual Machine
 
-## Estimated timing: 30 minutes
+## Architecture 
+In Task 1, you will deploy a SQL Server on an Azure Virtual Machine using the Azure portal. Then, in Task 2, you connect to that SQL Server from a client machine using tools like SSMS by enabling necessary network configurations. This setup allows you to run and manage SQL Server in the cloud.
 
 ## Architecture diagram
 
@@ -55,7 +58,7 @@ In this lab, you will complete the following tasks:
 
 1. Review the configuration on **Disks** tab, **Networking** tab  and navigate to  **Next:Management>** 
 
-1. On the **Management (1)** tab and review the configuration and Verify that **Enable auto_shutdown (2)** is unchecked, click **Next:Monitoring> (3)**
+1. On the **Management (1)** tab and review the configuration and Verify that **Enable auto-shutdown (2)** is unchecked, click **Next:Monitoring> (3)**
 
     ![Picture 15](../images/dp-300-lab1-6.png)
     
@@ -76,14 +79,15 @@ In this lab, you will complete the following tasks:
     ![Picture 20](../images/dp-300-lab1-9.png)
     
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-  
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="3379fa81-ffc4-49c5-82db-97274e81a612" />
+
 ### Task 2 - Connect to SQL Server on an Azure Virtual Machine
 
-1. On the **Overview** page for the virtual machine, select the **Connect** button.
+1. On the **Overview** page for the virtual machine, select the **Connect** pulldown and select **Connect**.
 
 1. On the RDP tab, select the **Download RDP File** button.
 
@@ -97,7 +101,7 @@ In this lab, you will complete the following tasks:
 
     ![Picture 23](../images/dp-300-lab1-12.png)
 
-1. Enter the username: **sqladmin** and password : **pwd!DP300lab01** selected during the virtual machine provisioning process. Then select **OK**.
+1. Enter the username: **sqladmin(1)** and password : **pwd!DP300lab01 (2)** selected during the virtual machine provisioning process. Then select **OK(3)**.
 
     ![Picture 24](../images/dp-300-lab1-13.png)
 
@@ -105,11 +109,11 @@ In this lab, you will complete the following tasks:
 
     ![Picture 26](../images/dp-300-lab1-14.png)
 
-1. Inside the Virtual Machine, Select the Windows Start button and type **SSMS(1)**. Select **Microsoft SQL Server Management Studio 19(2)** from the list.  
+1. Inside the Virtual Machine, Select the search bar besides the Windows Start button and type **SSMS(1)**. Select **SQL Server Management Studio 20(2)** from the list.  
 
    ![Picture 34](../images/dp-300-lab1-15.png)
 
-1. When SSMS opens, notice that the Connect to Server dialog will be pre-populated with the default instance name. Check the option Trust server certificate and then select Connect.
+1. When SSMS opens, notice that the Connect to Server dialog will be pre-populated with the default instance name. Check the option **Trust server certificate** and then select Connect.
 
     ![Picture 35](../images/up2.png)
 
