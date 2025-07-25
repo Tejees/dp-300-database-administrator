@@ -40,7 +40,7 @@ In this lab, you will complete the following tasks:
 
 1. In the **Microsoft Entra ID** sidebar, **search (1)** for the Azure username you logged into the Azure portal with, **select from the list (2)** then click on **Select (3)**.
 
-   ![Screenshot of the Active Directory admin page](../images/251.png)
+   ![Screenshot of the Active Directory admin page](../images/263.png)
 
 1. Select **Save** to complete the process. This will make your username the Microsoft Entra ID admin for the server as shown below.
 
@@ -54,7 +54,7 @@ In this lab, you will complete the following tasks:
 
    ![Picture 34](../images/ssms-updated-19-lab03.png)
 
-1. In the **Connect to Server** dialog box select **Database Engine** for Server type. In the **Server name** paste the name of your server you copied earlier. Change the authentication type to **Azure Active Directory - Universal with MFA**.For the **User name** field, select the Azure **Username** from the **Environment Details (1)** tab and click on **Connect**
+1. In the **Connect to Server** dialog box select **Database Engine** for Server type. In the **Server name (1)** paste the name of your server you copied earlier. Change the authentication type to **Azure Active Directory - Universal with MFA**.For the **User name** field, select the Azure **Username** from the **Environment Details (1)** tab and click on **Connect (2)**
 
    ![Screenshot of the Connect to server dialog](../images/dp300-lab3-img9.png)
 
@@ -148,9 +148,9 @@ In this task, you will manage access to the database and its objects. The first 
     EXECUTE SalesLT.DemoProc
     ```
 
-   ![Screenshot showing the returned rows of data from the stored procedure](../images/dp300-lab3-img14_new.png)
+    ![Screenshot showing the returned rows of data from the stored procedure](../images/dp300-lab3-img14_new.png)
 
-   >**Results:** In this exercise, you've seen how you can use Microsoft Entra ID to grant Azure credentials  access to a SQL Server hosted in Azure. You've also used T-SQL statement to create new database users and granted them permissions to run stored procedures.
+    >**Results:** In this exercise, you've seen how you can use Microsoft Entra ID to grant Azure credentials  access to a SQL Server hosted in Azure. You've also used T-SQL statement to create new database users and granted them permissions to run stored procedures.
 
 ### Review
 
