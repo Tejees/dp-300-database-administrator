@@ -23,6 +23,8 @@ In Task 1, you will deploy a SQL Server on an Azure Virtual Machine using the Az
 
 ### Task 1 - Deploy a SQL Server on an Azure Virtual Machine
 
+In this task you will be deploying a SQL Server on an Azure Virtual Machine allows you to run SQL Server in the cloud which provides flexibility for customization, backups, and scaling as per workload needs.
+
 1. On the Azure portal locate the search bar at the top of the page. Search for **Azure SQL (1)**. Select the search result for **Azure SQL (2)** that appears in the results under **Services**.
 
     ![Picture 9](../images/dp-300-lab1-1.png)
@@ -86,6 +88,8 @@ In Task 1, you will deploy a SQL Server on an Azure Virtual Machine using the Az
   <validation step="3379fa81-ffc4-49c5-82db-97274e81a612" />
 
 ### Task 2 - Connect to SQL Server on an Azure Virtual Machine
+
+In this task you will be connecting to SQL Server on an Azure Virtual Machine which involves accessing the VM using its public IP and SQL credentials via tools like SSMS.
 
 1. On the **Overview** page for the virtual machine, select the **Connect** pulldown and select **Connect**.
 
