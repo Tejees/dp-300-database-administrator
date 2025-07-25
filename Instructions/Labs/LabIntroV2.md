@@ -20,7 +20,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** details tab.
  
-![Explore Lab Resources](../images/254.png)
+![Explore Lab Resources](../images/262.png)
 
 ## Utilizing the Split Window Feature
  
@@ -36,7 +36,7 @@ Feel free to **start, stop, or restart(2)** your virtual machine as needed from 
 
  ## Lab Guide Zoom In/Zoom Out
 
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the **A↕** icon located next to the timer in the lab environment.
 
 ![ZoominZoomout](../images/255.png)
 
