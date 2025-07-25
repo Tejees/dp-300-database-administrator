@@ -10,7 +10,7 @@ Welcome to your DP-300: Azure Database Administrator Associate workshop! You'll 
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../images/guide.png)
+![Access Your VM and Lab Guide](../images/2501.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -20,19 +20,19 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** details tab.
  
-![Explore Lab Resources](../images/envi.png)
+![Explore Lab Resources](../images/2502.png)
 
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../images/splitwindow.png)
+![Use the Split Window Feature](../images/2503.png)
  
 ## Managing Your Virtual Machine
  
 Feel free to **start, stop, or restart(2)** your virtual machine as needed from the **Resources(1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../images/resourcetab.png)
+![Manage Your Virtual Machine](../images/2504.png)
 
  ## Lab Guide Zoom In/Zoom Out
 
@@ -44,7 +44,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
-    ![Launch Azure Portal](../images/portal.png))
+    ![Launch Azure Portal](../images/2505.png))
 
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
@@ -60,11 +60,11 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 4. If prompted to stay signed in, you can click **No**.
 
-  ![Enter Your Password](../images/signedinno.png)
+  ![Enter Your Password](../images/2506.png)
 
 5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "**Cancel**" to skip the tour.
 
-  ![Enter Your Password](../images/cancel.png)
+  ![Enter Your Password](../images/2507.png)
 
 6. Click **Next** from the bottom right corner to embark on your Lab journey!
  
