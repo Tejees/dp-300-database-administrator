@@ -46,7 +46,7 @@ In this task you will be deploying a SQL Server on an Azure Virtual Machine allo
     - **Availability Options(5):** No infrastructure redundancy required
     - **Security Type(6)**: Standard
     - **Image(7):** Free SQL Server License: SQL 2019 Developer on Windows Server 2022 - Gen1
-    - **Run with Azure spot instance(8):** No (unchecked)
+    - **Run with Azure Spot discount(8):** No (unchecked)
     - **Size(9):** Standard *D2s_v3* (2 vCPUs, 8 GiB memory). You may need to select the **"See all sizes"** link to see this option)
     - **Administrator account username(10):** sqladmin
     - **Administrator account password(11):** pwd!DP300lab01
