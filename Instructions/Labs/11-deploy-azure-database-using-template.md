@@ -23,9 +23,9 @@ In this lab, you will complete the following task:
     https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sql/sql-database
     ```
 
-1. Right-click **azuredeploy.json**, and select **Open link in new tab** to view the ARM template, which should look similar to this:
+1. Right-click **azuredeploy.json (1)**, and select **Open link in new tab (2)** to view the ARM template, which should look similar to this:
 
-   ![Deploy to Azure button](../images/2508.png)
+   ![Deploy to Azure button](../images/2514.png)
     
 
     ```JSON
@@ -104,7 +104,6 @@ In this lab, you will complete the following task:
 
     ![Deploy to Azure button](../images/2509.png)
 
-
     ![Deploy to Azure button](../images/2510.png)
 
 1. The **Create a SQL Server and Database** quickstart template page will open on Azure portal, with resource details partially filled in from the ARM template. Complete the blank fields with the information below:
@@ -129,7 +128,7 @@ In this lab, you will complete the following task:
 - Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 <validation step="5bab5a52-20c6-4893-acef-bedc4d988f95" />
 
