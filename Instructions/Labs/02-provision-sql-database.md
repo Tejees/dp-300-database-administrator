@@ -89,10 +89,10 @@ In this you will be creating an Azure SQL Database with SQL authentication, usin
 
           Your **Create SQL Database Server** page should look similar to the one below. Then click **OK (7)**.
 
-     ![Picture 7](../images/database-01.png)
+     ![Picture 7](../images/sqldbserver.png)
 
  -  Go back to the **Create SQL Database** page, make sure **Want to use Elastic Pool?** is set to **No**.
- -  Keep **Workload environment**  it as default **Production**
+ -  Keep **Workload environment**  it as default **Production**.
  -  On the **Compute + Storage** option, click on **Configure database** link. On the **Configure** page, for **Service tier** dropdown, select **Basic**, and then **Apply**.
 
      ![Picture 16](../images/basic.png)
@@ -124,7 +124,7 @@ In this you will be creating an Azure SQL Database with SQL authentication, usin
 - **Private DNS zone:** keep the default value **(9)**
 - Review settings, and then click **OK(10)**
 
-     ![Picture 9](../images/endp1.png)
+     ![Picture 9](../images/endpcrt.png)
 
 9. The new endpoint will appear on the **Private endpoints** list.
 
@@ -155,7 +155,7 @@ In this you will be creating an Azure SQL Database with SQL authentication, usin
 
 In this you will enable access to the Azure SQL Database by adding your IP address to the firewall and allowing Azure services to connect to the server.
 
-1. From the **SQL database** page, select the **Overview** section, and then select the **Server name link**
+1. From the **SQL database** page, select the **Overview** section, and then select the **Server name**.
 
     ![Picture 13](../images/updt-dp-300-module-02-lab-19.png)
 
@@ -186,15 +186,15 @@ Use SQL Server Management Studio (SSMS) to connect to the Azure SQL Database and
 
      ![Picture 17](../images/searchsql.png)
 
-4. In the Connect to Server dialog pop-up, paste the **Server name** value copied from the Azure portal.
+4. In the Connect to Server dialog pop-up, paste the **Server name(1)** value copied from the Azure portal.
 
-5. In the Authentication dropdown, select **SQL Server Authentication**.
+5. In the Authentication dropdown, select **SQL Server Authentication(2)**.
 
-6. In the Login field, enter **dp300admin**.
+6. In the Login field, enter **dp300admin(3)**.
 
-7. In the Password field, enter the password **dp300P@ssword!**.
+7. In the Password field, enter the password **dp300P@ssword!  (4)**.
 
-8. Select **Connect**.
+8. Select **Connect(5)**.
 
    ![Picture 17](../images/cntsqlcrt.png)
 
