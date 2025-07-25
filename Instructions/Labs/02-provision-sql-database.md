@@ -1,9 +1,9 @@
 # Lab 02: Provision an Azure SQL Database
 
 ## Lab scenario
-Students will configure basic resources needed to deploy an Azure SQL Database with a Virtual Network Endpoint. Connectivity to the SQL Database will be validated using Azure Data Studio from the lab VM.
+Students will configure basic resources needed to deploy an Azure SQL Database with a Virtual Network Endpoint. Connectivity to the SQL Database will be validated using SQL Server Management Studio from the lab VM.
 
-As a database administrator for AdventureWorks, you will set up a new SQL Database, including a Virtual Network Endpoint to increase and simplify the security of the deployment. Azure Data Studio will be used to evaluate the use of a SQL Notebook for data querying and results retention.
+As a database administrator for AdventureWorks, you will set up a new SQL Database, including a Virtual Network Endpoint to increase and simplify the security of the deployment. SQL Server Management Studio will be used to evaluate the use of a SQL Notebook for data querying and results retention.
 
 ## Lab objectives
 
@@ -12,10 +12,14 @@ In this lab, you will complete the following tasks:
 - Task 1: Create a Virtual Network
 - Task 2: Provision an Azure SQL Database
 - Task 3: Enable access to an Azure SQL Database
-- Task 4: Connect to an Azure SQL Database in Azure Data Studio
+- Task 4: Connect to an Azure SQL Database in SQL Server Management Studio
 - Task 5: Query an Azure SQL Database with a SQL Notebook
 
 ## Estimated timing: 45 minutes
+
+## Architecture 
+
+You will be creating a Virtual Network to establish a secure environment for resources. An Azure SQL Database is then provisioned and configured to allow access within this network. Finally, the database is accessed using SQL Server Management Studio, where queries are executed through a SQL Notebook for data analysis and management.
 
 ## Architecture diagram
 
@@ -28,9 +32,11 @@ In this lab, you will complete the following tasks:
      ![Picture 2](../images/upd-dp-300-module-02-lab-01_1.png)
 
 2. In the left navigation pane, click **Virtual Networks**
+     
+     ![vnet](../images/selectvnet.png)
 
 3. Click **+ Create** to open the **Create Virtual Network** page. On the **Basics** tab, complete the following information:
-   
+     
    **Note** : **Please make sure not to include additional spaces at the end when copying the parameters!!**
 
 - **Subscription:** Use existing subscription
@@ -43,16 +49,17 @@ In this lab, you will complete the following tasks:
 4.  Click **Review + Create**, review the settings for the new virtual network, and then click **Create**.
 
 5. Configure the virtual network’s IP range for the Azure SQL database endpoint by navigating to the virtual network created, and on the **Settings** pane, click **Subnets**.
+     ![vnet](../images/subnet.png)
 
 6. Click on the **default** subnet link. Note that the **Subnet address range** you see might be different.
 
-7. Under **Service Endpoints** pane on the right, expand the **Services** drop-down, and select **Microsoft.Sql**. Select **Save**.
+7. Click on **Service Endpoints(1)** from left pane, under Add service endpoints expand the **Services** drop down, select **Microsoft.Sql(2)**, and then select **default(3)** under Subnets. Select **Add(4)**.
 
    ![Picture 16](../images/12.png)
 
 ### Task 2 - Provision an Azure SQL Database
 
-1. From the Azure Portal, search for “SQL databases” in the search box at the top, then click **SQL databases** from the list of options.
+1. From the Azure Portal, search for **SQL databases(1)** in the search box at the top, then click **SQL databases(2)** from the list of options.
 
     ![Picture 5](../images/upd-dp-300-module-02-lab-10.png)
 
@@ -60,12 +67,14 @@ In this lab, you will complete the following tasks:
 
     ![Picture 6](../images/upd-dp-300-module-02-lab-10_1.png)
 
-3. On the **Create SQL Database** page, select the following options on the **Basics** tab and then click **Next: Networking**.
+3. On the **Create SQL Database Server** page, select the following options on the **Basics** tab and then click **Next: Networking**.
 
-     - **Subscription:** Use existing subscription
-     - **Resource group:** **contoso-rg-<inject key="DeploymentID" enableCopy="false"/>**
-     - **Database Name:** AdventureWorksLT
-     - **Server:** click on **Create new** link. The **Create SQL Database Server** page will open. Provide the server details as follow:
+     - **Subscription(1):** Use existing subscription
+     - **Resource group(2):** **contoso-rg-<inject key="DeploymentID" enableCopy="false"/>**
+     - **Database Name(3):** AdventureWorksLT
+     ![sql](../images/createsql.png)
+
+     - **Server:** click on **Create new(4)** link. The **Create SQL Database Server** page will open. Provide the server details as follow:
           - **Server name:** dp300-lab-<inject key="DeploymentID" enableCopy="false"/> **(1)**
           - **Location:**  <inject key="location" enableCopy="false"/> **(2)**
           - **Authentication method:** Use SQL authentication **(3)**
@@ -98,16 +107,18 @@ In this lab, you will complete the following tasks:
 
 8. Complete the **Create private endpoint** right pane as follows:
 
-- **Subscription:**  Use existing subscription
-- **Resource group:**  **contoso-rg-<inject key="DeploymentID" enableCopy="false"/>**
-- **Location:** <inject key="location" enableCopy="false"/>
-- **Name:** DP-300-SQL-Endpoint **(1)**
-- **Target sub-resource:** SqlServer **(2)**
-- **Virtual network:** lab02-vnet(contoso-rg-<inject key="DeploymentID" enableCopy="false"/>) **(3)**
-- **Subnet:** default (10.x.0.0/24) **(4)**
-- **Integrate with private DNS zone:** Yes **(5)**
-- **Private DNS zone:** keep the default value
-- Review settings, and then click **OK**
+- **Subscription:**  Use existing subscription **(1)**
+- **Resource group:**  **contoso-rg-<inject key="DeploymentID" enableCopy="false"/>(2)**
+- **Location:** <inject key="location" enableCopy="false"/> **(3)**
+- **Name:** DP-300-SQL-Endpoint **(4)**
+- **Target sub-resource:** SqlServer **(5)**
+- **Virtual network:** lab02-vnet(contoso-rg-<inject key="DeploymentID" enableCopy="false"/>) **(6)**
+- **Subnet:** default (10.x.0.0/24) **(7)**
+- **Integrate with private DNS zone:** Yes **(8)**
+- **Private DNS zone:** keep the default value **(9)**
+- Review settings, and then click **OK(10)**
+
+     ![Picture 9](../images/createendpoint.png)
 
 9. The new endpoint will appear on the **Private endpoints** list.
 
@@ -153,21 +164,23 @@ In this lab, you will complete the following tasks:
     ![Picture 15](../images/dp300-l2-failed.png)
     
     
-### Task 4 - Connect to an Azure SQL Database in Azure Data Studio
+### Task 4 - Connect to an Azure SQL Database in SQL Server Management Studio
 
-1. Launch Azure Data Studio from the lab virtual machine.
-
-   ![Picture 24](../images/123456.png)
-
-- You may see this pop-up at initial launch of Azure Data Studio. If you receive it, click **Yes (recommended)**
-
-    ![Picture 16](../images/upd-dp-300-module-02-lab-22.png)
-
-2. When Azure Data Studio opens, click the **Connections (1)** button in top left corner, and then **New Connection (2)**.
+1. On the Azure portal, select the SQL databases in the left navigation pane. And then select the AdventureWorksLT database.
+2. Copy the Server name value from the Overview page.
+3. Launch SQL Server Management Studio from the lab VM.
+4. In the Connect to Server dialog, paste the Server name value copied from the Azure portal.
+5. In the Authentication dropdown, select SQL Server Authentication.
+6. In the Login field, enter dp300admin
+7. In the Password field, enter the password selected during the SQL server creation.
+8. Select Connect.
+9. SQL Server Management Studio will connect to your Azure SQL Database server. You can expand the server and then the Databases node to see the AdventureWorksLT database.
 
     ![Picture 17](../images/lab2_1.png)
 
-3. In the **Connection** sidebar, fill out the **Connection Details** section with connection information to connect to the SQL database created previously.
+3.
+4. In the Connect to Server dialog, paste the Server name value copied from the Azure portal.
+In the **Connection** sidebar, fill out the **Connection Details** section with connection information to connect to the SQL database created previously.
 
 - Connection Type: **Microsoft SQL Server (1)**
 - Server: Enter the name of the SQL Server created previously. For example: **dp300-lab-<inject key="DeploymentID" enableCopy="false"/>.database.windows.net (2)**
@@ -195,27 +208,35 @@ In this lab, you will complete the following tasks:
 
     ![Picture 20](../images/upd-dp-300-module-02-lab-28.png)
 
-### Task 5 - Query an Azure SQL Database with a SQL Notebook
+### Task 5 - Query an Azure SQL Database with SQL Server Management Studio
 
-1. In Azure Data Studio, connected to this lab’s AdventureWorksLT database, click the **New Notebook** button.
+1. In SQL Server Management Studio, right-click on the AdventureWorksLT database and select New Query.
+2. Paste the following SQL statement into the query window:
+3. Select on the Execute button in the toolbar to execute the query.
+4. In the Results pane, review the results of the query.
+5. Right-click on the AdventureWorksLT database and select New Query.
+6. Paste the following SQL statement into the query window:
+7. Select on the Execute button in the toolbar to execute the query.
+8. In the Results pane, review the results of the query.
+9. Close SQL Server Management Studio. Select No when prompted to save changes.
 
     ![Picture 21](../images/upd-dp-300-module-02-lab-29.png)
 
-2. Click the **+Text** link to add a new text box in the notebook
+10. Click the **+Text** link to add a new text box in the notebook
 
     ![Picture 22](../images/upd-dp-300-module-02-lab-30.png)
 
     >**Note:** Within the notebook you can embed plain text to explain queries or result sets.
 
-3. Enter the text **Top Ten Customers by Order SubTotal**, making it Bold if desired.
+11. Enter the text **Top Ten Customers by Order SubTotal**, making it Bold if desired.
 
     ![A screenshot of a cell phone Description automatically generated](../images/upd-dp-300-module-02-lab-31.png)
 
-4. Click the **+ Cell** button, then **Code cell** to add a new code cell at the end of the notebook.
+12. Click the **+ Cell** button, then **Code cell** to add a new code cell at the end of the notebook.
 
     ![Picture 23](../images/upd-dp-300-module-02-lab-32.png)
 
-5. Paste the following SQL statement into the new cell:
+13. Paste the following SQL statement into the new cell:
 
    ```sql
    SELECT TOP 10 cust.[CustomerID],
@@ -228,17 +249,17 @@ In this lab, you will complete the following tasks:
    ORDER BY [OverallOrderSubTotal] DESC
    ```
 
-6. Click on the **blue circle with the arrow to execute** the query. Note how the results are included within the cell with the query.
+11. Click on the **blue circle with the arrow to execute** the query. Note how the results are included within the cell with the query.
 
    ![Picture 24](../images/1234.png)
 
-7. Click the **+ Cell** button, then **Text cell** to add a new code cell at the end of the notebook.
+11. Click the **+ Cell** button, then **Text cell** to add a new code cell at the end of the notebook.
 
     ![Picture 24](../images/upd-dp-300-module-02-lab-34.png)
 
-8. Enter the text **Top Ten Ordered Product Categories**, making it Bold if desired.
+12. Enter the text **Top Ten Ordered Product Categories**, making it Bold if desired.
 
-9. Click the **+ Cell** button again, then **Code cell**, and paste the following SQL statement into the cell:
+13. Click the **+ Cell** button again, then **Code cell**, and paste the following SQL statement into the cell:
 
    ```sql
    SELECT TOP 10 cat.[Name] AS ProductCategory,
@@ -252,15 +273,15 @@ In this lab, you will complete the following tasks:
    ORDER BY [OrderedQuantity] DESC
    ```
 
-10. Click on the **blue circle with the arrow to execute** the query.
+11. Click on the **blue circle with the arrow to execute** the query.
 
-11. To run all cells in the notebook and present results, click the **Run all** button in the toolbar.
+12. To run all cells in the notebook and present results, click the **Run all** button in the toolbar.
 
     ![Picture 17](../images/upd-dp-300-module-02-lab-33.png)
 
-12. Within Azure Data Studio save the notebook from File menu (either Save or Save As) to the **C:\LabFiles\Deploy Azure SQL Database** path (create the folder structure if it does not exist). Make sure the file extension is **.ipynb**(Notebook)
+13. Within Azure Data Studio save the notebook from File menu (either Save or Save As) to the **C:\LabFiles\Deploy Azure SQL Database** path (create the folder structure if it does not exist). Make sure the file extension is **.ipynb**(Notebook)
 
-13. Close the tab for the Notebook from inside of Azure Data Studio. From the File Menu, select Open File, and open the notebook you just saved. Observe that query results were saved along with the queries in the notebook.
+14. Close the tab for the Notebook from inside of Azure Data Studio. From the File Menu, select Open File, and open the notebook you just saved. Observe that query results were saved along with the queries in the notebook.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
