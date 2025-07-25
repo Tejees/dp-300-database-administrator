@@ -245,6 +245,8 @@ Connect to the Azure SQL Database using SQL Server Management Studio (SSMS) with
 7. Select on the Execute button in the toolbar to execute the query.
 8. In the Results pane, review the results of the query.
 
+
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
