@@ -27,13 +27,15 @@ You will be creating a Virtual Network to establish a secure environment for res
 
 ### Task 1 - Create a Virtual Network
 
+In this task you will be creating a Virtual Network in Azure Portal.
+
 1. In the Azure portal home page, select the **left hand menu.**
 
      ![Picture 2](../images/upd-dp-300-module-02-lab-01_1.png)
 
 2. In the left navigation pane, click **Virtual Networks**
      
-     ![vnet](../images/selectvnet.png)
+     ![vnet](../images/selectvnet1.png)
 
 3. Click **+ Create** to open the **Create Virtual Network** page. On the **Basics** tab, complete the following information:
      
@@ -49,7 +51,7 @@ You will be creating a Virtual Network to establish a secure environment for res
 4.  Click **Review + Create**, review the settings for the new virtual network, and then click **Create**.
 
 5. Configure the virtual network’s IP range for the Azure SQL database endpoint by navigating to the virtual network created, and on the **Settings** pane, click **Subnets**.
-     ![vnet](../images/subnet.png)
+     ![vnet](../images/subnet1.png)
 
 6. Click on the **default** subnet link. Note that the **Subnet address range** you see might be different.
 
@@ -58,6 +60,8 @@ You will be creating a Virtual Network to establish a secure environment for res
    ![Picture 16](../images/12.png)
 
 ### Task 2 - Provision an Azure SQL Database
+
+In this you will be creating an Azure SQL Database with SQL authentication, using a private endpoint for secure network connectivity within a virtual network.
 
 1. From the Azure Portal, search for **SQL databases(1)** in the search box at the top, then click **SQL databases(2)** from the list of options.
 
@@ -118,7 +122,7 @@ You will be creating a Virtual Network to establish a secure environment for res
 - **Private DNS zone:** keep the default value **(9)**
 - Review settings, and then click **OK(10)**
 
-     ![Picture 9](../images/createendpoint.png)
+     ![Picture 9](../images/endp1.png)
 
 9. The new endpoint will appear on the **Private endpoints** list.
 
@@ -142,9 +146,12 @@ You will be creating a Virtual Network to establish a secure environment for res
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+     
      <validation step="821cad36-93f1-4c9f-9db3-e7c82d22235d" />
   
 ### Task 3 - Enable access to an Azure SQL Database
+
+In this you will enable access to the Azure SQL Database by adding your IP address to the firewall and allowing Azure services to connect to the server.
 
 1. From the **SQL database** page, select the **Overview** section, and then select the link for the server name in the top section:
 
@@ -165,8 +172,9 @@ You will be creating a Virtual Network to establish a secure environment for res
     
 ### Task 4 - Connect to an Azure SQL Database in SQL Server Management Studio
 
-1. On the Azure portal, select the SQL databases in the left navigation pane. And then select the AdventureWorksLT database.
-2. Copy the Server name value from the Overview page.
+1. On the Azure portal, select the **SQL databases** in the left navigation pane. And then select the **AdventureWorksLT** database.
+
+2. Copy the **Server name** value from the Overview page.
 
      ![Picture 17](../images/servername.png)
 
@@ -175,9 +183,13 @@ You will be creating a Virtual Network to establish a secure environment for res
      ![Picture 17](../images/searchsql.png)
 
 4. In the Connect to Server dialog pop-up, paste the **Server name** value copied from the Azure portal.
+
 5. In the Authentication dropdown, select **SQL Server Authentication**.
+
 6. In the Login field, enter **dp300admin**.
+
 7. In the Password field, enter the password **dp300P@ssword!**.
+
 8. Select **Connect**.
 
    ![Picture 17](../images/connectsqlser.png)
