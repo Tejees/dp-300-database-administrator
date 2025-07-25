@@ -39,24 +39,24 @@ In this task you will be deploying a SQL Server on an Azure Virtual Machine allo
 
 1. On the **Create a virtual machine** page, enter the following information and click **Next:Disks>**
 
-    - **Subscription:** Use existing subscription 
-    - **Resource group:** contoso-rg-<inject key="DeploymentID" enableCopy="false"/>
-    - **Virtual machine name:**  azureSQLServerVM
-    - **Region:** <inject key="location" enableCopy="false" />
-    - **Availability Options:** No infrastructure redundancy required
-    - **Security Type**: Standard
-    - **Image:** Free SQL Server License: SQL 2019 Developer on Windows Server 2022 - Gen1
-    - **Run with Azure spot instance:** No (unchecked)
-    - **Size:** Standard *D2s_v3* (2 vCPUs, 8 GiB memory). You may need to select the **"See all sizes"** link to see this option)
-    - **Administrator account username:** sqladmin
-    - **Administrator account password:** pwd!DP300lab01
-    - **Confirm password:** pwd!DP300lab01
+    - **Subscription(1):** Use existing subscription 
+    - **Resource group(2):** contoso-rg-<inject key="DeploymentID" enableCopy="false"/>
+    - **Virtual machine name(3):**  azureSQLServerVM
+    - **Region(4):** <inject key="location" enableCopy="false" />
+    - **Availability Options(5):** No infrastructure redundancy required
+    - **Security Type(6)**: Standard
+    - **Image(7):** Free SQL Server License: SQL 2019 Developer on Windows Server 2022 - Gen1
+    - **Run with Azure spot instance(8):** No (unchecked)
+    - **Size(9):** Standard *D2s_v3* (2 vCPUs, 8 GiB memory). You may need to select the **"See all sizes"** link to see this option)
+    - **Administrator account username(10):** sqladmin
+    - **Administrator account password(11):** pwd!DP300lab01
+    - **Confirm password(12):** pwd!DP300lab01
     - **Select inbound ports:** RDP (3389)
     - **Would you like to use an existing Windows Server license?:** No (unchecked)
 
     Make note of the username and password for later use.
 
-    ![Picture 12](../images/dp-300-lab1-7.png)
+    ![Picture 12](../images/infra.png)
 
 1. Review the configuration on **Disks** tab, **Networking** tab  and navigate to  **Next:Management>** 
 
