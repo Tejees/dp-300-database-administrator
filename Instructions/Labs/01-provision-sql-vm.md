@@ -115,15 +115,15 @@ In this task you will be connecting to SQL Server on an Azure Virtual Machine wh
 
 1. Inside the Virtual Machine, Select the search bar besides the Windows Start button and type **SSMS(1)**. Select **SQL Server Management Studio 20(2)** from the list.  
 
-   ![Picture 34](../images/dp-300-lab1-15.png)
+     ![Picture 34](../images/dp-300-lab1-15.png)
 
 1. When SSMS opens, notice that the Connect to Server dialog will be pre-populated with the default instance name. Check the option **Trust server certificate** and then select Connect.
 
     ![Picture 35](../images/up2.png)
 
->**Note**: Make sure Encryption is selected as Mandatory.
+    >**Note**: Make sure Encryption is selected as Mandatory.
 
->**Results:** In this exercise, you've seen how the Azure portal gives you powerful tools to manage a SQL Server hosted in a virtual machine. These tools include control over automated patching, automated backups, and giving you an easy way to setup high availability.
+    >**Results:** In this exercise, you've seen how the Azure portal gives you powerful tools to manage a SQL Server hosted in a virtual machine.These tools include control over automated patching, automated backups, and giving you an easy way to setup high availability.
 
 ### Review
 
