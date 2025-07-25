@@ -38,7 +38,9 @@ In this lab, you will complete the following tasks:
 
    ![Screenshot selecting Set admin](../images/DP-300-MED-2.png)
 
-1. In the **Microsoft Entra ID** sidebar, search for the Azure username you logged into the Azure portal with, then click on **Select**.
+1. In the **Microsoft Entra ID** sidebar, **search (1)** for the Azure username you logged into the Azure portal with, **select from the list (2)** then click on **Select (3)**.
+
+   ![Screenshot of the Active Directory admin page](../images/251.png)
 
 1. Select **Save** to complete the process. This will make your username the Microsoft Entra ID admin for the server as shown below.
 
@@ -64,17 +66,17 @@ In this lab, you will complete the following tasks:
 - Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="d1c82057-60b7-4436-8dea-9f04e55c760c" />
 
 ### Task 2 - Manage access to database objects
 
 In this task, you will manage access to the database and its objects. The first thing you will do is create two users in the *AdventureWorksLT* database.
 
-1. Use the **Object Explorer** and expand **Databases**.
+1. Use the **Object Explorer** and expand **Databases (1)**. Right-click on **AdventureWorksLT**, and select **New Query (2)**.
 
-1. Right-click on **AdventureWorksLT**, and select **New Query**.
-
-   ![Screenshot of the new query menu option](../images/dp300-lab3-img11.png)
+   ![Screenshot of the new query menu option](../images/252.png)
 
 1. In the new query window, copy and paste the below T-SQL into it. **Execute** the query to create the two users.
 
