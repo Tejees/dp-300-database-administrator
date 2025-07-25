@@ -31,7 +31,7 @@ In this task you will be creating a Virtual Network in Azure Portal.
 
 1. In the Azure portal home page, select the **left hand menu.**
 
-     ![Picture 2](../images/upd-dp-300-module-02-lab-01_1.png)
+     ![Picture 2](../images/sql1.png)
 
 2. In the left navigation pane, click **Virtual Networks**
      
@@ -55,7 +55,7 @@ In this task you will be creating a Virtual Network in Azure Portal.
 
 6. Click on the **default** subnet link. Note that the **Subnet address range** you see might be different.
 
-7. Click on **Service Endpoints(1)** from left pane, under Add service endpoints expand the **Services** drop down, select **Microsoft.Sql(2)**, and then select **default(3)** under Subnets. Select **Add(4)**.
+7. Click on **Service Endpoints(1)** from left pane, under Add service endpoints expand the **Services** drop down, select **Microsoft.Sql(2)**, and then select **default(3)** under Subnets then click on **Add(4)**.
 
    ![Picture 16](../images/12.png)
 
@@ -76,7 +76,8 @@ In this you will be creating an Azure SQL Database with SQL authentication, usin
      - **Subscription(1):** Use existing subscription
      - **Resource group(2):** **contoso-rg-<inject key="DeploymentID" enableCopy="false"/>**
      - **Database Name(3):** AdventureWorksLT
-     ![sql](../images/createsql.png)
+     
+     ![sql](../images/sqldbserver.png)
 
      - **Server:** click on **Create new(4)** link. The **Create SQL Database Server** page will open. Provide the server details as follow:
           - **Server name:** dp300-lab-<inject key="DeploymentID" enableCopy="false"/> **(1)**
@@ -90,7 +91,8 @@ In this you will be creating an Azure SQL Database with SQL authentication, usin
 
      ![Picture 7](../images/database-01.png)
 
- -  Back to the **Create SQL Database** page, make sure **Want to use Elastic Pool?** is set to **No**.
+ -  Go back to the **Create SQL Database** page, make sure **Want to use Elastic Pool?** is set to **No**.
+ -  Keep **Workload environment**  it as default **Production**
  -  On the **Compute + Storage** option, click on **Configure database** link. On the **Configure** page, for **Service tier** dropdown, select **Basic**, and then **Apply**.
 
      ![Picture 16](../images/basic.png)
@@ -101,7 +103,7 @@ In this you will be creating an Azure SQL Database with SQL authentication, usin
 
 5. Then click **Next: Networking**.
 
-6. On the **Networking** tab, for **Network Connectivity** option, click the **Private endpoint** radio button.
+6. On the **Networking** tab, for **Connectivity method** option, click the **Private endpoint** radio button.
 
     ![Picture 8](../images/upd-dp-300-module-02-lab-14.png)
 
@@ -153,7 +155,7 @@ In this you will be creating an Azure SQL Database with SQL authentication, usin
 
 In this you will enable access to the Azure SQL Database by adding your IP address to the firewall and allowing Azure services to connect to the server.
 
-1. From the **SQL database** page, select the **Overview** section, and then select the link for the server name in the top section:
+1. From the **SQL database** page, select the **Overview** section, and then select the **Server name link**
 
     ![Picture 13](../images/updt-dp-300-module-02-lab-19.png)
 
@@ -194,7 +196,7 @@ Use SQL Server Management Studio (SSMS) to connect to the Azure SQL Database and
 
 8. Select **Connect**.
 
-   ![Picture 17](../images/connectsqlser.png)
+   ![Picture 17](../images/cntsqlcrt.png)
 
 9. SQL Server Management Studio will connect to your Azure SQL Database server. You can expand the server and then the Databases node to see the AdventureWorksLT database.
 
@@ -219,13 +221,13 @@ Connect to the Azure SQL Database using SQL Server Management Studio (SSMS) with
     ORDER BY [OverallOrderSubTotal] DESC
     ```
 
-3. Select on the **Execute button** in the toolbar to execute the query in the **query window**.
+3. Select on the **Execute button** in the toolbar to execute the **query** in the query window.
 
-     ![Picture 21](../images/execute.png)
+     ![Picture 21](../images/execute1.png)
 
 4. In the **Results** pane, review the results of the query.
 
-     ![Picture 21](../images/resultsq.png)
+     ![Picture 21](../images/resultsq1.png)
 
 5. Right-click on the AdventureWorksLT database and select New Query.
 6. Paste the following SQL statement into the query window
