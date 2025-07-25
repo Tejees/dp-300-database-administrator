@@ -23,7 +23,7 @@ You will be creating a Virtual Network to establish a secure environment for res
 
 ## Architecture diagram
 
-![](../images/preview(02).png)
+![](../images/SQLARCHI.png)
 
 ### Task 1 - Create a Virtual Network
 
