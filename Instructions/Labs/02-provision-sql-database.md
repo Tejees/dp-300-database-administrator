@@ -173,7 +173,7 @@ You will be creating a Virtual Network to establish a secure environment for res
 
 3. Launch SQL Server Management Studio from the lab VM.
 
-     ![Picture 17](../images/servername.png)
+     ![Picture 17](../images/searchsql.png)
 
 4. In the Connect to Server dialog pop-up, paste the Server name value copied from the Azure portal.
 5. In the Authentication dropdown, select **SQL Server Authentication**.
