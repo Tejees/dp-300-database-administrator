@@ -255,6 +255,11 @@ Connect to the Azure SQL Database using SQL Server Management Studio (SSMS) with
 
      ![Picture 21](../images/resultsq1.png)
 
+9. Go to **File Explorer** in your LabVM and navigate to **C:\LabFiles** and create a folder by right clicking and select **New** then click on **Folder** and name it as **Deploy Azure SQL Database**.
+
+10. Within  SQL Server Management Studio save the query from File menu in folder **C:\LabFiles\Deploy Azure SQL Database**. 
+
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
