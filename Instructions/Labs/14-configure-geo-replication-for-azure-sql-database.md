@@ -26,15 +26,15 @@ In this lab, you will complete the following tasks:
 
     ![Screenshot of selecting the AdventureWorks SQL database.](../images/dp-300-lab14-03.png)
 
-1. On the blade for the database, in **Data management** section, select **Replicas**.
+1. On the blade for the database, in **Data management (1)** section, select **Replicas (2)**.
 
-    ![Screenshot showing selecting Geo-Replication.](../images/dp-300-lab14-04.png)
+    ![Screenshot showing selecting Geo-Replication.](../images/300.png)
 
 1. Select **+ Create replica**.
 
     ![Screenshot showing selecting Geo-Replication page.](../images/dp-300-lab14-05.png)
 
-1. On the **Create SQL Database - Geo Replica** page and under **Server**, select the **Create New** link.
+1. On the **Create SQL Database - Geo Replica** page under **Database details** and under **Server**, select the **Create New** link.
 
     ![Screenshot showing Create New server link.](../images/lab14-dp-300-L6.png)
 
@@ -56,7 +56,7 @@ In this lab, you will complete the following tasks:
 
 1. Select **Create**.
 
-    ![Screenshot showing the review and create page.](../images/lab14-dp-300-L9.png)
+    ![Screenshot showing the review and create page.](../images/302.png)
 
 1. The secondary server and the database will now be created. To check the status, look under the notification icon at the top of the portal. 
 
@@ -70,23 +70,27 @@ In this lab, you will complete the following tasks:
 - Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="f9a5df03-f694-4d36-beb3-7b69e514fb35" />
   
 ### Task 2 - Failover SQL Database to a secondary region
 
 Now that the Azure SQL Database replica is created, you will perform a failover.
 
-1. Navigate to the SQL servers page, and notice the new server in the list. Select the secondary server (you may have a different server name).
+1. Navigate to the **SQL servers (1)** and select **SQL servers (2)** page, and notice the new server in the list. Select the **secondary server** (you may have a different server name).
+
+    ![Screenshot showing SQL servers page.](../images/303.png)
 
     ![Screenshot showing SQL servers page.](../images/lab14-dp-300-L1-1.png)
 
-1. On the blade for the SQL server, in **Settings** section, select **SQL databases** and then select **AdventureWorksLT**.
+1. On the blade for the SQL server, in **Settings (1)** section, select **SQL databases (2)** and then select **AdventureWorksLT (3)**.
 
-    ![Screenshot showing SQL databases option.](../images/dp-300-lab14-13.png)
+    ![Screenshot showing SQL databases option.](../images/304.png)
 
-1. On the SQL database main blade, in **Data management** section, select **Replicas**.
+1. On the SQL database main blade, in **Data management (1)** section, select **Replicas (2)**.
 
-    ![Screenshot showing selecting Geo-Replication.](../images/dp-300-lab14-14.png)
+    ![Screenshot showing selecting Geo-Replication.](../images/305.png)
 
    > **Note** that the geo replication link is now established.
 
