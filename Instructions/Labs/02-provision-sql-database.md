@@ -196,7 +196,7 @@ Use SQL Server Management Studio (SSMS) to connect to the Azure SQL Database and
 
 8. Select **Connect(5)**.
 
-   ![Picture 17](../images/cntsqlcrt.png)
+    ![Picture 17](../images/cntsqlcrt.png)
 
 9. SQL Server Management Studio will connect to your Azure SQL Database server. You can expand the server and then the Databases node to see the AdventureWorksLT database.
 
