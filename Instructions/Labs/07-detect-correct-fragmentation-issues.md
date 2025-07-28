@@ -23,7 +23,7 @@ In this lab, you will complete the following tasks:
 
 ### Task 1 - Restore a database
    
-1. Double-click on the icon SSMS on your labvm. 
+1. Double-click on the icon **SSMS** on your labvm. 
 
    ![Picture 01](../images/ssms.png)
 
@@ -36,7 +36,7 @@ In this lab, you will complete the following tasks:
 
     ![Picture 02](../images/Dp-300-lab07-03.png)
 
-4. In the **New query window**, copy and paste the below T-SQL into it. Execute the query to restore the database.
+4. In the **New query window**, copy and paste the below T-SQL into it. **Execute** the query to restore the database.
 
     ```sql
     RESTORE DATABASE AdventureWorks2017
@@ -48,15 +48,15 @@ In this lab, you will complete the following tasks:
             TO 'C:\LabFiles\Monitorandoptimize\AdventureWorks2017_log.ldf';
     ```
     
-5. You should see a successful message after the restore is complete.
+5. Under the **Messages** tab, you should see a message indicating that the database was restored successfully.
 
     ![Picture 03](../images/dp300-lab7-img5.png)
     
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
   
 ### Task 2 - Investigate index fragmentation
 
@@ -111,7 +111,7 @@ In this lab, you will complete the following tasks:
 
     This query will increase the fragmentation level of the Person.Address table and its indexes by adding a large number of new records.
 
-3. Execute the previous query again. Now you should be able to see four highly fragmented indexes.
+3. Execute the previous query again. Now you should be able to see **four highly fragmented indexes**.
 
     ![Picture 03](../images/Screenshot_16.png)
 
@@ -133,20 +133,19 @@ In this lab, you will complete the following tasks:
     GO
     ```
 
-  5. Click on the **Messages** tab in the result pane of SQL Server Management Studio. Make note of the count of logical reads performed by the query.
+  5. Click on the **Messages** tab in the result pane of SQL Server Management Studio. Make note of the count of logical reads performed by the query on the Address table.
       
       ![Picture 03](../images/dp11.png)
     
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
   
 
 ### Task 3 - Rebuild fragmented indexes
 
-1. Copy and paste the following T-SQL code into the query window. Select **Execute** to execute this query.
+1. Select a **New Query** and copy and paste the following T-SQL code into the query window. Select **Execute** to execute this query.
 
     ```sql
     USE AdventureWorks2017
@@ -162,7 +161,7 @@ In this lab, you will complete the following tasks:
         ALLOW_PAGE_LOCKS = ON)
     ```
 
-2. Execute the query below to confirm that the **IX_Address_StateProvinceID** index no longer has fragmentation greater than 50%.
+2. Select a **New Query** and **Execute** the query below to confirm that the **IX_Address_StateProvinceID** index no longer has fragmentation greater than 50%.
 
     ```sql
     USE AdventureWorks2017
@@ -181,7 +180,7 @@ In this lab, you will complete the following tasks:
 
       >**Note:** Comparing the results we can see the fragmentation dropped from 81% to 0.
 
-3. Re-execute the select statement from the previous section. Make note of the logical reads in the **Messages** tab of the **Results** pane in Management Studio. Was there a change from the number of logical reads encountered before you rebuilt the index?
+3. Re-execute the select statement from the previous section. Make note of the logical reads in the **Messages** tab of the **Results** pane in Management Studio. *Was there a change from the number of logical reads encountered before you rebuilt the index for the address table?*
 
     ```sql
     SET STATISTICS IO,TIME ON
