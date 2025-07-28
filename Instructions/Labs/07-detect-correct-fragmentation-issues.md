@@ -27,11 +27,11 @@ This workflow involves three main tasks performed using SQL Server Management St
 
 ### Task 1 - Restore a database
 
-In this task, you restore a database using SQL Server Management Studio (SSMS). This step sets up the environment for further analysis and maintenance tasks.
+In this task, you will restore a database using SQL Server Management Studio (SSMS). This step sets up the environment for further analysis and maintenance tasks.
 
 1. Double-click on the icon **SSMS** on your labvm. 
 
-   ![Picture 01](../images/ssms.png)
+   ![Picture 01](../images/ssmsdeskp.png)
 
 1. When SSMS opens, notice that the **Connect to Server** dialog will be pre-populated with the default Server name with **sqlvm-<inject key="DeploymentID" enableCopy="false" /> (1)**. Select **Connect (2)**.
    > **NOTE:** If the default instance name is blank, you can type the name **sqlvm-<inject key="DeploymentID" enableCopy="false" /> (1)**. Select **Connect (2)**.
