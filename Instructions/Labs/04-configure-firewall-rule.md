@@ -33,44 +33,51 @@ In this lab, you will complete the following task:
 
     ![Picture 2](../images/dp300-lab4-img5.png)
 
-1. On the **Networking** page, click on **+ Add your client IPv4 address (your IP address)**, and then click **Save**.
+1. On the **Networking** page, click on **+ Add your client IPv4 address (your IP address) (1)**, in full **IP address (2)** is selected and then click **Save (3)**.
 
-    ![Picture 3](../images/dp300-lab4-img6.png)
+    ![Picture 3](../images/270.png)
 
     >**Note:** Your client IP address was automatically entered for you. Adding your client IP address to the list will allow you to connect to your Azure SQL Database using SQL Server Management Studio or any other client tools. **Make note of your client IP address, you will use it later.**
 
-1. Open **SQL Server Management Studio** in the labvm. On the Connect to Server dialog box, paste in the name of your Azure SQL Database server, and login with the credentials below:
+1. In the windows search **SQL Server Management Studio (1)** and **select (2)** it in the labvm. On the Connect to Server dialog box, paste in the name of your Azure SQL Database server, and login with the credentials below:
 
-    - **Server name:** <inject key="sqlServerFqdn"></inject> 
-    - **Authentication:** SQL Server Authentication
-    - **Server admin login:** sqladmin
-    - **Password:** P@ssw0rd01
-    - Click **Connect**.
+    ![Picture 3](../images/271.png)
+   
 
-     ![A screenshot of a cell phone Description automatically generated](../images/dp300-lab4-img7.png)
+    - **Server name:** <inject key="sqlServerFqdn"></inject>  **(1)**
+    - **Authentication:** SQL Server Authentication **(2)**
+    - **login:** sqladmin **(3)**
+    - **Password:** P@ssw0rd01 **(4)**
+    - Click **Connect (5)**.
+
+     ![A screenshot of a cell phone Description automatically generated](../images/272.png)
 
 1. In Object Explorer expand the server node, and right click on **Databases**. Click **Import Data-tier Application**.
 
     ![A screenshot of a social media post Description automatically generated](../images/dp300-lab4-img8.png)
 
 1. In the **Import Data Tier Application** dialog, click **Next** on the first screen.
-     
-1. In the **Import Settings** screen, click **Browse** and navigate to **C:\LabFiles\SecureEnvironment** folder, click on the **AdventureWorksLT.bacpac** file, and then click **Open**.
 
-    ![A screenshot of a social media post Description automatically generated](../images/dp300-lab4-img9.png)
+    ![](../images/273.png)
+     
+1. In the **Import Settings** screen, click **Browse** and navigate to **C:\LabFiles\SecureEnvironment (1)** folder, click on the **AdventureWorksLT.bacpac (2)** file, and then click **Open (3)**.
+
+    ![](../images/274.png)
+
+    ![A screenshot of a social media post Description automatically generated](../images/275.png)
 
 1.  Back to the **Import Data-tier Application** screen click **Next**.
 
-    ![A screenshot of a social media post Description automatically generated](../images/dp300-lab4-img10.png)
+    ![A screenshot of a social media post Description automatically generated](../images/276.png)
 
-1. On the **Database Settings** screen, make the changes as below:
+1. On the **Database Settings (1)** screen, make the changes as below:
 
-    - **Database name:** AdventureWorksFromBacpac
-    - **Edition of Microsoft Azure SQL Database**: Basic
+    - **Database name:** AdventureWorksFromBacpac **(2)**
+    - **Edition of Microsoft Azure SQL Database**: Basic **(3)**
 
-    - Click **Next**.
+    - Click **Next (4)**.
 
-    ![A screenshot of a cell phone Description automatically generated](../images/dp300-lab4-img11.png)
+    ![A screenshot of a cell phone Description automatically generated](../images/277.png)
 
 1. On the **Summary** screen click **Finish**. When your import completes you will see the results below. Then click **Close**.
 
@@ -104,9 +111,9 @@ In this lab, you will complete the following task:
 
     >**Note:** This command creates a contained user within the **AdventureWorksFromBacpac** database. We will test this credential in the next step.
 
-1. Navigate to the **Object Explorer**. Click on **Connect**, and then **Database Engine**.
+1. Navigate to the **Object Explorer**. Click on **Connectc(1)**, and then **Database Engine (2)**.
 
-    ![Picture 1960831949](../images/dp300-lab4-img15.png)
+    ![Picture 1960831949](../images/278.png)
 
 1. Attempt to connect with the credentials you created in the previous step. You will need to use the following information:
 
@@ -117,15 +124,17 @@ In this lab, you will complete the following task:
 
      You will receive the following error.
 
-    ![A screenshot of a cell phone Description automatically generated](../images/dp300-lab4-img16.png)
+1. This error is generated because the connection attempted to login to the *master* database and not **AdventureWorksFromBacpac** where the user was created. Change the connection context by clicking **OK** to exit the error message.
+    
+    ![A screenshot of a cell phone Description automatically generated](../images/279.png)
 
-    >**Note:** This error is generated because the connection attempted to login to the *master* database and not **AdventureWorksFromBacpac** where the user was created. Change the connection context by clicking **OK** to exit the error message, and then clicking on **Options >>** in the **Connect to Server** dialog box as shown below.
+1. Then clicking on **Options >>** in the **Connect to Server** dialog box as shown below.
 
     ![Picture 9](../images/dp300-lab4-img17.png)
 
-1. On the **Connection Properties** tab, type the database name **AdventureWorksFromBacpac**, and then click **Connect**.
+1. On the **Connection Properties** tab, type the database, type the name as **AdventureWorksFromBacpac (1)**, and then click **Connect (2)**.
 
-    ![A screenshot of a social media post Description automatically generated](../images/dp300-lab4-img18.png)
+    ![A screenshot of a social media post Description automatically generated](../images/280.png)
 
 1. Notice that you were able to successfully authenticate using the **ContainedDemo** user. This time you were directly logged into **AdventureWorksFromBacpac**, which is the only database to which the newly created user has access to.
 
@@ -137,6 +146,8 @@ In this lab, you will complete the following task:
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="c0faf7e6-3918-4be9-b39a-46689b6d3696" />
 
 >**Results:** In this exercise, you've configured server and database firewall rules to access a database hosted on Azure SQL Database. You've also used T-SQL statements to create a contained user, and used SQL Server Management Studio to check the access.
 
