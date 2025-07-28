@@ -36,7 +36,7 @@ In this lab, you will complete the following tasks:
 
     ![Picture 02](../images/Dp-300-lab07-03.png)
 
-4. In the **New query window**, copy and paste the below T-SQL into it. Execute the query to restore the database.
+4. In the **New query window**, copy and paste the below T-SQL into it. **Execute** the query to restore the database.
 
     ```sql
     RESTORE DATABASE AdventureWorks2017
@@ -48,7 +48,7 @@ In this lab, you will complete the following tasks:
             TO 'C:\LabFiles\Monitorandoptimize\AdventureWorks2017_log.ldf';
     ```
     
-5. Under the Messages tab, you should see a message indicating that the database was restored successfully.
+5. Under the **Messages** tab, you should see a message indicating that the database was restored successfully.
 
     ![Picture 03](../images/dp300-lab7-img5.png)
     
@@ -161,7 +161,7 @@ In this lab, you will complete the following tasks:
         ALLOW_PAGE_LOCKS = ON)
     ```
 
-2. Select a **New Query** and execute the query below to confirm that the **IX_Address_StateProvinceID** index no longer has fragmentation greater than 50%.
+2. Select a **New Query** and **Execute** the query below to confirm that the **IX_Address_StateProvinceID** index no longer has fragmentation greater than 50%.
 
     ```sql
     USE AdventureWorks2017
