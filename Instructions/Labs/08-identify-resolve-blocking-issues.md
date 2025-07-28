@@ -23,7 +23,7 @@ In this lab, you will complete the following tasks:
 
 ### Task 1 - Restore a database
 
-1. Double-click on the icon SSMS on your labvm. 
+1. Double-click on the icon **SSMS** on your labvm. 
 
    ![Picture 01](../images/ssms.png)
 
@@ -33,11 +33,13 @@ In this lab, you will complete the following tasks:
 
     ![Picture 02](../images/upd-dp-300-module-07-lab-01.png)
 
-3. Select the **Databases** folder, and then **New Query**.
+3. Select the **Databases (1)** folder, and then **New Query (2)**.
 
-    ![Picture 03](../images/dp-300-lab08-02.png)
+    ![Picture 03](../images/291.png)
 
 4. In the **New query** window, copy and paste the below T-SQL into it. Select **Execute** to execute this query to restore the database.
+
+    ![](../images/292.png)
 
     ```sql
     RESTORE DATABASE AdventureWorks2017
@@ -57,7 +59,9 @@ In this lab, you will complete the following tasks:
 - Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="bcff7151-3f38-42ee-8e86-782a1369ea14" />
   
 
 ### Task 2 - Run blocked queries report
@@ -134,11 +138,11 @@ In this lab, you will complete the following tasks:
     ```
     >**Note:** This query does not return any results and appears to run indefinitely.
 
-1. In **Object Explorer**, expand  **Management** -> **Extended Events** -> **Sessions** -> **Blocking**.
+1. In **Object Explorer**, expand  **Management (1)** -> **Extended Events** -> **Sessions** **(2)** -> **Blocking (3)**.
 
     Notice the extended event named *Blocking* we just created is in the list.
 
-    ![Picture 01](../images/dp300-lab8-img5.png)
+    ![Picture 01](../images/293.png)
 
 1. Right click on **package0.ring_buffer**, and then select **View Target Data**.
 
@@ -239,7 +243,9 @@ In this lab, you will complete the following tasks:
 - Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="5d1e23f2-fe74-4e76-af07-78dcb4ca3772" />
   
 >**Results:** In this exercise, you've learned how to identify sessions being blocked, and to mitigate those scenarios.
 
