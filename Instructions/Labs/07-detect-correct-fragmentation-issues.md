@@ -17,17 +17,23 @@ In this lab, you will complete the following tasks:
 
 ## Estimated timing: 30 minutes
 
+## Architecture 
+
+This workflow involves three main tasks performed using SQL Server Management Studio (SSMS). In Task 1, a database is restored to prepare for index optimization. Task 2 involves investigating index fragmentation to identify performance issues caused by fragmented indexes. In Task 3, the identified fragmented indexes are rebuilt to enhance query performance and maintain database efficiency. This process helps in ensuring that the database runs optimally by maintaining healthy index structures.
+
 ## Architecture diagram
 
 ![](../images/preview(07).png)
 
 ### Task 1 - Restore a database
-   
+
+In this task, you will restore a database using SQL Server Management Studio (SSMS). This step sets up the environment for further analysis and maintenance tasks.
+
 1. Double-click on the icon **SSMS** on your labvm. 
 
-   ![Picture 01](../images/ssms.png)
+   ![Picture 01](../images/ssmsdeskp.png)
 
-1. When SSMS opens, notice that the **Connect to Server** dialog will be pre-populated with the default instance name with **sqlvm-<inject key="DeploymentID" enableCopy="false" /> (1)**. Select **Connect (2)**.
+1. When SSMS opens, notice that the **Connect to Server** dialog will be pre-populated with the default Server name with **sqlvm-<inject key="DeploymentID" enableCopy="false" /> (1)**. Select **Connect (2)**.
    > **NOTE:** If the default instance name is blank, you can type the name **sqlvm-<inject key="DeploymentID" enableCopy="false" /> (1)**. Select **Connect (2)**.
 
     ![Picture 02](../images/upd-dp-300-module-07-lab-01.png)
@@ -59,6 +65,8 @@ In this lab, you will complete the following tasks:
 
   
 ### Task 2 - Investigate index fragmentation
+
+In this task, you analyze the database to identify indexes that are fragmented. This helps determine which indexes need maintenance to improve query performance.
 
 1. Select **New Query**. Copy and paste the following T-SQL code into the query window. Select **Execute** to execute this query.
 
@@ -144,6 +152,8 @@ In this lab, you will complete the following tasks:
   
 
 ### Task 3 - Rebuild fragmented indexes
+
+In this task, you rebuild the fragmented indexes identified earlier to optimize data access. Rebuilding improves database performance by organizing index pages more efficiently.
 
 1. Select a **New Query** and copy and paste the following T-SQL code into the query window. Select **Execute** to execute this query.
 
