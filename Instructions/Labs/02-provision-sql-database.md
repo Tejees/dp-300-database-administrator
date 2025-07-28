@@ -40,13 +40,13 @@ In this task you will be creating a Virtual Network in Azure Portal.
 3. Click **+ Create** to open the **Create Virtual Network** page. On the **Basics** tab, complete the following information:
      
    **Note** : **Please make sure not to include additional spaces at the end when copying the parameters!!**
+     
+     - **Subscription:** Use existing subscription
+     - **Resource group:** **contoso-rg-<inject key="DeploymentID" enableCopy="false"/>** **(1)**
+     - **Name:** **lab02-vnet** **(2)**
+     - **Region:** <inject key="location" enableCopy="false"/> **(3)**
 
-- **Subscription:** Use existing subscription
-- **Resource group:** **contoso-rg-<inject key="DeploymentID" enableCopy="false"/>** **(1)**
-- **Name:** **lab02-vnet** **(2)**
-- **Region:** <inject key="location" enableCopy="false"/> **(3)**
-
-    ![Picture 2](../images/upd-dp-300-module-02-lab-05.png)
+       ![Picture 2](../images/upd-dp-300-module-02-lab-05.png)
 
 4.  Click **Review + Create**, review the settings for the new virtual network, and then click **Create**.
 
@@ -72,7 +72,7 @@ In this you will be creating an Azure SQL Database with SQL authentication, usin
     ![Picture 6](../images/upd-dp-300-module-02-lab-10_1.png)
 
 3. On the **Create SQL Database Server** page, select the following options on the **Basics** tab and then click **Next: Networking**.
-
+     
      - **Subscription(1):** Use existing subscription
      - **Resource group(2):** **contoso-rg-<inject key="DeploymentID" enableCopy="false"/>**
      - **Database Name(3):** AdventureWorksLT
@@ -91,7 +91,7 @@ In this you will be creating an Azure SQL Database with SQL authentication, usin
 
      ![Picture 7](../images/sqldbserver.png)
 
- -  Go back to the **Create SQL Database** page, make sure **Want to use Elastic Pool?** is set to **No**.
+      -  Go back to the **Create SQL Database** page, make sure **Want to use Elastic Pool?** is set to **No**.
  -  Keep **Workload environment**  it as default **Production**.
  -  On the **Compute + Storage** option, click on **Configure database** link. On the **Configure** page, for **Service tier** dropdown, select **Basic**, and then **Apply**.
 
