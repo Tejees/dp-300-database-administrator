@@ -92,8 +92,8 @@ In this you will be creating an Azure SQL Database with SQL authentication, usin
      ![Picture 7](../images/sqldbserver.png)
 
       -  Go back to the **Create SQL Database** page, make sure **Want to use Elastic Pool?** is set to **No**.
- -  Keep **Workload environment**  it as default **Production**.
- -  On the **Compute + Storage** option, click on **Configure database** link. On the **Configure** page, for **Service tier** dropdown, select **Basic**, and then **Apply**.
+      -  Keep **Workload environment**  it as default **Production**.
+      -  On the **Compute + Storage** option, click on **Configure database** link. On the **Configure** page, for **Service tier** dropdown, select **Basic**, and then **Apply**.
 
      ![Picture 16](../images/basic.png)
 
@@ -113,18 +113,18 @@ In this you will be creating an Azure SQL Database with SQL authentication, usin
 
 8. Complete the **Create private endpoint** right pane as follows:
 
-- **Subscription:**  Use existing subscription **(1)**
-- **Resource group:**  **contoso-rg-<inject key="DeploymentID" enableCopy="false"/>(2)**
-- **Location:** <inject key="location" enableCopy="false"/> **(3)**
-- **Name:** DP-300-SQL-Endpoint **(4)**
-- **Target sub-resource:** SqlServer **(5)**
-- **Virtual network:** lab02-vnet(contoso-rg-<inject key="DeploymentID" enableCopy="false"/>) **(6)**
-- **Subnet:** default **(7)**
-- **Integrate with private DNS zone:** Yes **(8)**
-- **Private DNS zone:** keep the default value **(9)**
-- Review settings, and then click **OK(10)**
+     - **Subscription:**  Use existing subscription **(1)**
+     - **Resource group:**  **contoso-rg-<inject key="DeploymentID" enableCopy="false"/>(2)**
+     - **Location:** <inject key="location" enableCopy="false"/> **(3)**
+     - **Name:** DP-300-SQL-Endpoint **(4)**
+     - **Target sub-resource:** SqlServer **(5)**
+     - **Virtual network:** lab02-vnet(contoso-rg-<inject key="DeploymentID" enableCopy="false"/>) **(6)**
+     - **Subnet:** default **(7)**
+     - **Integrate with private DNS zone:** Yes **(8)**
+     - **Private DNS zone:** keep the default value **(9)**
+     - Review settings, and then click **OK(10)**
 
-     ![Picture 9](../images/endpcrt.png)
+       ![Picture 9](../images/endpcrt.png)
 
 9. The new endpoint will appear on the **Private endpoints** list.
 
@@ -206,7 +206,7 @@ Connect to the Azure SQL Database using SQL Server Management Studio (SSMS) with
 
 1. In SQL Server Management Studio, right-click on the **AdventureWorksLT** database and select **New Query**.
 
-   ![Picture 21](../images/newquery.png)
+    ![Picture 21](../images/newquery.png)
 
 2. Paste the following SQL statement into the query window:
 
@@ -231,7 +231,7 @@ Connect to the Azure SQL Database using SQL Server Management Studio (SSMS) with
 
 5. Right-click on the **AdventureWorksLT** database and select **New Query**.
 
-   ![Picture 21](../images/newquery.png)
+    ![Picture 21](../images/newquery.png)
 
 6. Paste the following SQL statement into the query window
 
