@@ -211,11 +211,11 @@ Now that the functionality is configured, you can generate a backup file as a bl
 
     ![](../images/327.png)
 
-1. In the left hand pane select **Data storage (1)** in dropdown select **Containers (2)** and select **backups (3)** container.
+1. On left hand pane select **containers (2)** under **Data storage (1)** and select **backups (3)** container.
 
     ![](../images/328.png)
 
-1. In backups container, in the left hand pane select **Settings (1)** under settings select **Shared access tokens (2)** under **permissions (3)** select **Read,Add,Create,Write (4)** then below click on **generate SAS token and URL (5)**.
+1. In backups container select **Shared access tokens (2)** under **settings (1)** on left hand pane, enable **Read, Add, Create, Write (4)** under **Permissions (3)** and click on **generate SAS token and URL (5)**. 
 
      ![](../images/329.png)
 
@@ -229,11 +229,50 @@ Now that the functionality is configured, you can generate a backup file as a bl
 
      ![](../images/331.png)
 
-1. Re-Perform the task 3
+1. Re-Perform the task 3 by the following steps
 
-1. In step 2 paste the blob sas token which copied earlier in notepad, then credential will create.
+1. Move back to **SQL Server Management Studio (SSMS)** and select **New Query**.
 
-1. After that re-perform task 4 step 1 you will get expected output.
+     ![Screenshot of the shared access signature key.](../images/324.png)
+
+1. In step 2 paste the blob sas token which copied earlier in notepad, then credential will create. Create the credential that will be used to access storage in the cloud with the following Transact-SQL. Repalce the following values, then select **Execute**.
+
+   >**Note**: Make sure paste newly generated SAS key in the <key_value>.
+
+   >**NOTE:** Replace `'<storage_account_name>'` with **dp300backupstr<inject key="DeploymentID" enableCopy="false" />**. Replace the **key_value** with the **SAS** that you have copied in the notepad. the value generated at the end of the previous task in this format:
+   `'se=2023-12-31T00%3A00Z&sp=rwdl&sv=2018-11-09&sr=csig=rnoGlveGql7ILhziyKYUPBq5ltGc/pzqOCNX5rrLdRQ%3D'`
+     
+      ```sql
+    IF NOT EXISTS  
+    (SELECT * 
+        FROM sys.credentials  
+        WHERE name = 'https://<storage_account_name>.blob.core.windows.net/backups')  
+    BEGIN
+        CREATE CREDENTIAL [https://<storage_account_name>.blob.core.windows.net/backups]
+        WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+        SECRET = '<key_value>'
+    END;
+    GO  
+    ```
+  
+    ![Screenshot of the credential on SSMS.](../images/upd-dp-300-module-15-lab.png)
+   
+1. You can check if the credential was created successfully by navigating to **Security (1)-> Credentials (2)** on Object Explore.
+
+    ![Screenshot of the credential on SSMS.](../images/325.png)
+
+1. Perform the step 1 in this task again here select **New Query**, then paste and select **Execute** for the following query, now you will get expected output.
+
+    ```sql
+    BACKUP DATABASE AdventureWorks2017   
+    TO URL = 'https://<storage_account_name>.blob.core.windows.net/backups/AdventureWorks2017.bak';
+    GO 
+    ```
+
+    
+   > **Note:** Replace `'<storage_account_name>'` with **dp300backupstr<inject key="DeploymentID" enableCopy="false" />**. The output should return something similar to below.
+    
+   ![Screenshot of the backup error.](../images/upd-dp-300-module-15-lab-18.png)
 
 ### Task 5 - Validate the backup through Azure CLI
 
@@ -279,7 +318,7 @@ To see that the file is actually in Azure, you can use Storage Explorer or Azure
 - Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
 - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 <validation step="0242c2c4-a2f0-4145-99c9-546fa339193c" />
   
@@ -313,7 +352,7 @@ This task will show you how to restore a database from an Azure blob storage.
 
 1. To restore the database to get it back to where it was before the customer name was mistakenly changed, select **New Query**, then paste and, select **Execute** for the following query.
 
-   > **Note:** **SET SINGLE_USER WITH ROLLBACK IMMEDIATE** syntax the open transactions will all be rolled back. This can prevent the restore failing due to active connections.
+    > **Note:** **SET SINGLE_USER WITH ROLLBACK IMMEDIATE** syntax the open transactions will all be rolled back. This can prevent the restore failing due to active connections.
 
     ```sql
     USE [master]
@@ -334,7 +373,7 @@ This task will show you how to restore a database from an Azure blob storage.
 
      The output should be similar to this:
 
-    ![Screenshot showing the restore database from URL being executed.](../images/upd-dp-300-module-15-lab-20.png)
+     ![Screenshot showing the restore database from URL being executed.](../images/upd-dp-300-module-15-lab-20.png)
 
 1. Re-run **Step 1** to verify that the customer name has been restored.
 
