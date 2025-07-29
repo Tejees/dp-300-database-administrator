@@ -27,7 +27,7 @@ In this lab, you will complete the following tasks:
 
     ![Picture 03](../images/upd-dp-300-module-15-lab-00.png)
 
-1. Double-click on icon SSMS on your labvm. 
+1. Double-click on icon **SSMS** on your labvm. 
 
     ![Picture 01](../images/ssms.png)
 
@@ -69,17 +69,17 @@ In this lab, you will complete the following tasks:
 
     ![Screenshot of welcome page for cloud shell on Azure portal.](../images/upd-dp-300-module-15-lab-02.png)
 
-1. On the **Getting started**, select **Mount storage account** and select your subscription under storage account subscription. Click on **Apply**.
+1. On the **Getting started**, select **Mount storage account (1)** and select your subscription under **storage account subscription (2)**. Click on **Apply (3)**.
 
-    ![Screenshot of create storage for cloud shell on Azure portal.](../images/lab15-storage-acc-1.png)
+    ![Screenshot of create storage for cloud shell on Azure portal.](../images/321.png)
 
-1. On the **Mount storage account** tab, select **I want to create a storage account**. Click on **Next**.
+1. On the **Mount storage account** tab, select **I want to create a storage account (1)**. Click on **Next (2)**.
 
-    ![Screenshot of create storage for cloud shell on Azure portal.](../images/lab15-storage-acc-2.png)
+    ![Screenshot of create storage for cloud shell on Azure portal.](../images/322.png)
 
-1. Use the existing **Resource group** as **contoso-rg-<inject key="DeploymentID" enableCopy="false" />(1)** and specify new names for **Storage account** as **dp300storage<inject key="DeploymentID" enableCopy="false" /> (2)** and **File share** as **dp300fileshare (3)**, as shown in the dialog below. Then select **Create (4)**.
+1. Use the existing **Resource group** as **contoso-rg-<inject key="DeploymentID" enableCopy="false" />(1)** and specify new names for **Storage account** as **dp300storage<inject key="DeploymentID" enableCopy="false" /> (2)** and **File share** as **dp300fileshare (3)**, as shown in the dialog below. Select Region as **East US (4)** Then select **Create (5)**.
 
-    ![Screenshot of the create storage account and file share on Azure portal.](../images/lab15-storage-acc-3.png)
+    ![Screenshot of the create storage account and file share on Azure portal.](../images/323.png)
 
 1. Once complete, you will see a prompt similar to the one below. Verify that the upper left corner of the Cloud Shell screen shows **Bash**.
 
@@ -147,6 +147,9 @@ Now that the functionality is configured, you can generate a backup file as a bl
 
 1. Move back to **SQL Server Management Studio (SSMS)** and select **New Query**.
 
+     ![Screenshot of the shared access signature key.](../images/324.png)
+
+
 1. Create the credential that will be used to access storage in the cloud with the following Transact-SQL. Repalce the following values, then select **Execute**.
 
    >**NOTE:** Replace `'<storage_account_name>'` with **dp300backupstr<inject key="DeploymentID" enableCopy="false" />**. Replace the **key_value** with the **SAS** that you have copied in the notepad. the value generated at the end of the previous task in this format:
@@ -168,9 +171,9 @@ Now that the functionality is configured, you can generate a backup file as a bl
     
       ![Screenshot of the credential on SSMS.](../images/upd-dp-300-module-15-lab.png)
    
-1. You can check if the credential was created successfully by navigating to **Security -> Credentials** on Object Explore.
+1. You can check if the credential was created successfully by navigating to **Security (1)-> Credentials (2)** on Object Explore.
 
-    ![Screenshot of the credential on SSMS.](../images/upd-dp-300-module-15-lab-17.png)
+    ![Screenshot of the credential on SSMS.](../images/325.png)
 
 1. If you mistyped and need to recreate the credential, you can drop it with the following command, making sure to change the name of the storage account. (Only run this command if you need to go back and recreate the credential).  select **New Query**, then paste and execute the following query.
 
@@ -198,7 +201,39 @@ Now that the functionality is configured, you can generate a backup file as a bl
 
     ![Screenshot of the backup error.](../images/upd-dp-300-module-15-lab-10.png)
 
-    If an error occurs, check that you did not mistype anything during the credential creation, and that everything was created successfully.
+    If an error occurs, perform the below steps.
+
+1. Navigate to the azure portal and search **storage accounts (1)** and select **storage accounts (2)**.
+
+    ![](../images/326.png)
+
+1. Select the storage account just created the name should be **dp300backupstrxxxxxxxx**.
+
+    ![](../images/327.png)
+
+1. In the left hand pane select **Data storage (1)** in dropdown select **Containers (2)** and select **backups (3)** container.
+
+    ![](../images/328.png)
+
+1. In backups container, in the left hand pane select **Settings (1)** under settings select **Shared access tokens (2)** under **permissions (3)** select **Read,Add,Create,Write (4)** then below click on **generate SAS token and URL (5)**.
+
+     ![](../images/329.png)
+
+1. Copy that **blob SAS token** in notepad.
+
+     ![](../images/330.png)
+
+1. Navigate back to **SSMS** portal.
+
+1. Right click on existin credential and **Delete** the existing credential then select **Ok**.
+
+     ![](../images/331.png)
+
+1. Re-Perform the task 3
+
+1. In step 2 paste the blob sas token which copied earlier in notepad, then credential will create.
+
+1. After that re-perform task 4 step 1 you will get expected output.
 
 ### Task 5 - Validate the backup through Azure CLI
 

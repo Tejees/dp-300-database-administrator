@@ -56,16 +56,67 @@ To adjust the zoom level for the environment page, click the **A↕** icon locat
  
    ![Enter Your Password](../images/user1.png)
 
-4. If prompted to stay signed in, you can click **No**.
+### Steps to Proceed with MFA Setup if the "Ask Later" Option is Not Visible
 
-    ![Enter Your Password](../images/2506.png)
+1. If you see the pop-up **Stay Signed in?**, click **No**.
+
+   ![Enter Your Password](../images/2506.png)
+
+1. If **Action required** pop-up window appears, click on **Next**.
+   
+   ![](../images/400.png)
+
+1. On **Start by getting the app** page, click on **Next**.
+1. Click on **Next** twice.
+1. In **android**, go to the play store and Search for **Microsoft Authenticator** and Tap on **Install**.
+
+   ![Install](../images/401.png)
+
+   > Note: For iOS, open the App Store and repeat the steps.
+
+   > Note: Skip if already installed.
+
+1. Open the app and tap on **Scan a QR code**.
+
+1. Scan the QR code visible on the screen **(1)** and click on **Next (2)**.
+
+   ![QR code](../images/402.png)
+
+1. Enter the digit displayed on the Screen in the Authenticator app on your mobile and tap on **Yes**.
+
+1. Once the notification is approved, click on **Next**.
+
+   ![Approved](../images/403.png)
+
+1. Click on **Done**.
+
+1. If prompted to stay signed in, you can click **"No"**.
+
+1. Tap on **Finish** in the Mobile Device.
+
+   > NOTE: While logging in again, enter the digits displayed on the screen in the **Authenticator app** and click on Yes.
 
 5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "**Cancel**" to skip the tour.
 
     ![Enter Your Password](../images/2507.png)
 
-6. Click **Next** from the bottom right corner to embark on your Lab journey!
- 
-     ![Start Your Azure Journey](../images/num.png)
+
+1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+
+6. Click "Next" from the bottom right corner to embark on your Lab journey!
+
+      ![Start Your Azure Journey](../images/num.png)
+
+
+This hands-on lab will guide you through implementing end-to-end DevOps practices using Azure DevOps and GitHub. You will deploy an Azure web app with GitHub Actions, set up CI/CD automation with YAML pipelines, and configure release gates based on app health. Additionally, you will integrate the Mend Bolt extension to detect open-source vulnerabilities, ensuring security and compliance in your pipeline.
+
+### Support Contact
+
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance anytime. We offer dedicated support channels tailored specifically for learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+
+Learner Support Contacts:
+
+- Email Support: cloudlabs-support@spektrasystems.com
+- Live Chat Support: https://cloudlabs.ai/labs-support
  
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
